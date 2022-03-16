@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import NavBar from '../components/NavBar'
 import doorway from '../public/images/doorway.png'
 import Image from 'next/image'
 import uniswap from '../public/images/uniswap-grants.png'
 import polygon from '../public/images/Polygon-logo.svg'
+import NavBar from '../components/elements/NavBar'
 
 const Home: NextPage = () => {
   return (

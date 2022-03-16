@@ -1,15 +1,16 @@
+import Button from "../elements/Button"
 
 const L0_SetupMetamask = (props:any) => {
     return (<div>
-        <h1>Lesson 0</h1>  
+        <p>Lesson 0</p> 
         <br /> <br />
-        <button onClick={(e) => props.nextLesson()}>Next Lesson</button>
+        <Button variant='dark' onClick={() => props.nextLesson()}>Next Lesson</Button>
         <br /> <br />
-        <button onClick={(e) => props.prevLesson()}>Prev Lesson</button>
+        <Button onClick={() => props.prevLesson()}>Prev Lesson</Button>
     </div>
     )
   }
 
-  
-  export default L0_SetupMetamask
-  
+
+export default L0_SetupMetamask
+
