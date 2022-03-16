@@ -7,7 +7,7 @@ const index: NextPage = () => {
     <div>
       <NavBar></NavBar>
       <h1>Learn Web3</h1>
-      <Link href='/web3'>Introduction of Web3</Link>
+      <Link href='/learn/web3'>Introduction of Web3</Link>
 
     </div>
   )

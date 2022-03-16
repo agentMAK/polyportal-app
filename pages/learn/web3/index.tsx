@@ -1,16 +1,16 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import NavBar from '../components/NavBar'
+import NavBar from '../../../components/NavBar'
 
-const setupMetaMask: NextPage = () => {
+const index: NextPage = () => {
   return (
     <div>
       <NavBar></NavBar>
       <h1>The Beginners Journey into Web3</h1>
-      <Link href='/'>Hello</Link>
+      <Link href='/learn/web3/setupMetamask'>Hello</Link>
 
     </div>
   )
 }
 
-export default setupMetaMask
+export default index
