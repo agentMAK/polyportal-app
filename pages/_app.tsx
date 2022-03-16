@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/general-sans.css'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
