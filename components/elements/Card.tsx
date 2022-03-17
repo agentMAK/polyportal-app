@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Card = (props:any) => {
     return (<div>
-      <div className="flex flex-col rounded-xl shadow-md w-72 mx-5 my-5">
+      <div className="flex flex-col rounded-xl shadow-md w-72 mx-5 my-5 hover:border-2 hover:border-solid hover:border-primary">
         <Link href={props.link}><a>
           <Image
                 src={props.image}

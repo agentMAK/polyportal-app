@@ -1,12 +1,10 @@
 import type { NextPage } from 'next'
-import Link from 'next/link'
-import Card from '../../../components/elements/card'
 import uniswapCard from '../../../public/images/uniswapCard.png'
 import metamaskCard from '../../../public/images/metamaskCard.png'
 import openseaCard from '../../../public/images/openseaCard.png'
 import MainHeader from '../../../components/elements/MainHeader'
 import NavBar from '../../../components/elements/NavBar'
-import Image from 'next/image'
+import Card from '../../../components/elements/Card'
 
 
 
@@ -22,11 +20,11 @@ const index: NextPage = () => {
               Mus ut ornare felis pharetra, eu in a tortor. Lorem ipsum dolor sit amet, 
               consectetur adipiscing elit. Mus ut ornare felis pharetra, eu in a tortor.</Card>
 
-            <Card title="Make a token swap on Uniswap" image={uniswapCard} link=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <Card title="Make a token swap on Uniswap" image={uniswapCard} link='/learn/web3/tokenSwap'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
               Mus ut ornare felis pharetra, eu in a tortor. Lorem ipsum dolor sit amet, 
               consectetur adipiscing elit. Mus ut ornare felis pharetra, eu in a tortor.</Card>
 
-            <Card title="Buy a NFT on Opensea" image={openseaCard} link=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <Card title="Buy a NFT on Opensea" image={openseaCard} link='/learn/web3/buyNFT'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
               Mus ut ornare felis pharetra, eu in a tortor. Lorem ipsum dolor sit amet, 
               consectetur adipiscing elit. Mus ut ornare felis pharetra, eu in a tortor.</Card>
         </div>

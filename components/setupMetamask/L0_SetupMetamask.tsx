@@ -1,13 +1,15 @@
-import Button from "../elements/Button"
+import AppHeader from "../elements/App/AppHeader"
+import SplitView from "../elements/App/SplitView"
+import metamaskLogo from '../../public/images/MetaMaskFox.png'
 
 const L0_SetupMetamask = (props:any) => {
-    return (<div>
-        <p>Lesson 0</p> 
-        <br /> <br />
-        <Button variant='dark' onClick={() => props.nextLesson()}>Next Lesson</Button>
-        <br /> <br />
-        <Button onClick={() => props.prevLesson()}>Prev Lesson</Button>
-    </div>
+    return (<main className='w-full h-full flex flex-col'>
+        <AppHeader title="Installing Metamask">MetaMask is a popular browser-based wallet that makes it easy to use your Ethereum account. We are going install MetaMask to create and wallet and get you all set up. </AppHeader>
+        <SplitView image={metamaskLogo}>
+              <p className='text-xl'>You can download the MetaMask browser extention at: </ p>
+            <br />
+            <a href="https://metamask.io/download/" target="_blank" rel="noopener noreferrer" className='text-xl font-sans-semibold text-primary hover:underline'>https://metamask.io/download</a></SplitView>
+      </main>
     )
   }
 

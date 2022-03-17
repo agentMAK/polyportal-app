@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import Card from '../../components/elements/card'
+import Card from '../../components/elements/Card'
 import MainHeader from '../../components/elements/MainHeader'
 import NavBar from '../../components/elements/NavBar'
 import metamaskCard from '../../public/images/metamaskCard.png'

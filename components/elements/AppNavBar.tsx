@@ -3,7 +3,7 @@ import Link from 'next/link'
 import logo from '../../public/images/polyportalName.svg'
 import twitter from '../../public/images/twitter.png'
 
-const NavBar = () => {
+const NavBar = (props:any) => {
     return (
     <div className="top-0 w-full text-center bg-primary100" >
       <div className="flex max-w-screen-lg mx-auto justify-between pt-8">
@@ -21,7 +21,7 @@ const NavBar = () => {
             height={50}
         /></a>
     </div>
-    <h1 className="text-3xl font-sans-semibold mt-5 p-5">Setup a wallet using Metamask</h1>
+    <h1 className="text-3xl font-sans-semibold mt-5 p-5">{props.children}</h1>
   </div>
     )
   }
