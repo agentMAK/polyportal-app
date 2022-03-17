@@ -1,4 +1,4 @@
-import Head from 'next/Head'
+import Head from 'next/head'
 import polyportalLogo from '../public/images/polyportalName.svg'
 
 const Meta = (props:any) => {
@@ -20,7 +20,7 @@ const Meta = (props:any) => {
         <meta property="twitter:title" content={props.title}/>
         <meta property="twitter:description" content={props.description}/>
         <meta property="twitter:image" content={polyportalLogo}/>
-        
+
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
