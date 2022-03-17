@@ -3,11 +3,13 @@ import Link from 'next/link'
 import Card from '../../components/elements/Card'
 import MainHeader from '../../components/elements/MainHeader'
 import NavBar from '../../components/elements/NavBar'
+import Meta from '../../components/meta'
 import metamaskCard from '../../public/images/metamaskCard.png'
 
 const index: NextPage = () => {
   return (
     <div>
+      <Meta title="PolyPortal - Learn Web3"></Meta>
       <NavBar></NavBar>
       <div className="flex flex-col items-center max-w-screen-lg mx-auto text-left">
         <MainHeader>Learn Web3</MainHeader>

@@ -4,6 +4,7 @@ import L1_SetupMetamask from '../../../components/setupMetamask/L1_SetupMetamask
 import L0_SetupMetamask from '../../../components/setupMetamask/L0_SetupMetamask'
 import Button from '../../../components/elements/Button'
 import AppNavBar from '../../../components/elements/AppNavBar'
+import Meta from '../../../components/meta'
 
 const SetupMetamask: NextPage = () => {
 
@@ -32,6 +33,7 @@ const SetupMetamask: NextPage = () => {
   return (
     <div>
       <div className='h-screen'>
+      <Meta title='PolyPortal - Setup a wallet using Metamask'></Meta>
         <AppNavBar>Setup a wallet using Metamask</AppNavBar>
         <div className='m-auto h-full max-w-screen-lg flex flex-col justify-between'>
           {lessonPages[lesson].value}

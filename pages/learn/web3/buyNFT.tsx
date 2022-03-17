@@ -6,6 +6,7 @@ import L0_tokenSwap from '../../../components/tokenSwap/L0_tokenSwap'
 import L1_tokenSwap from '../../../components/tokenSwap/L1_tokenSwap'
 import L0_buyNFT from '../../../components/buyNFT/L0_buyNFT'
 import L1_buyNFT from '../../../components/buyNFT/L1_buyNFT'
+import Meta from '../../../components/meta'
 
 const BuyNFT: NextPage = () => {
 
@@ -34,6 +35,7 @@ const BuyNFT: NextPage = () => {
   return (
     <div>
       <div className='h-screen'>
+        <Meta title='PolyPortal - Buy an NFT on Opensea'></Meta>
         <AppNavBar>Buy an NFT on Opensea</AppNavBar>
         <div className='m-auto h-full max-w-screen-lg flex flex-col justify-between'>
           {lessonPages[lesson].value}

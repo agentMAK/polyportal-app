@@ -4,10 +4,12 @@ import Image from 'next/image'
 import uniswap from '../public/images/uniswap-grants.png'
 import polygon from '../public/images/Polygon-logo.svg'
 import NavBar from '../components/elements/NavBar'
+import Meta from '../components/meta'
 
 const Home: NextPage = () => {
   return (
     <div>
+      <Meta></Meta>
       <NavBar></NavBar>
       <div className="flex flex-col items-center max-w-screen-lg mx-auto text-center">
         <h1 className='text-7xl mt-20 mb-8 font-sans-medium'>Learn and explore <br/> Web3</h1>

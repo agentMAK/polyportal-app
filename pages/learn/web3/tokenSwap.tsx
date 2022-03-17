@@ -6,6 +6,7 @@ import Button from '../../../components/elements/Button'
 import AppNavBar from '../../../components/elements/AppNavBar'
 import L0_tokenSwap from '../../../components/tokenSwap/L0_tokenSwap'
 import L1_tokenSwap from '../../../components/tokenSwap/L1_tokenSwap'
+import Meta from '../../../components/meta'
 
 const TokenSwap: NextPage = () => {
 
@@ -34,6 +35,7 @@ const TokenSwap: NextPage = () => {
   return (
     <div>
       <div className='h-screen'>
+        <Meta title='PolyPortal - Make a token swap on Uniswap'></Meta>
         <AppNavBar>Make a token swap on Uniswap</AppNavBar>
         <div className='m-auto h-full max-w-screen-lg flex flex-col justify-between'>
           {lessonPages[lesson].value}
