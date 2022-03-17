@@ -11,7 +11,7 @@ const Card = (props:any) => {
                 height={188}
                 width={300}
             />
-          <div className=" rounded-br-xl rounded-bl-xl h-40 w-full text-left">
+          <div className=" rounded-br-xl rounded-bl-xl h-16 w-full text-left">
             {/* <div className="bg-primary h-full w-full m-4"></div> */}
             <div className="p-4">
             <p className='font-sans-semibold text-primary mb-1'>{props.title}</p>
