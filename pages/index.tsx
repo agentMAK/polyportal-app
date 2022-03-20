@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <div className="flex flex-col items-center max-w-screen-lg mx-auto text-center">
         <h1 className='text-7xl mt-20 mb-8 font-sans-medium'>Learn and explore <br/> Web3</h1>
         <p className="mb-8">Join our live instructor-led workshops teaching  <br/> the basics of Web3 for beginner&apos;s on <span className="text-primary font-sans-semibold">Polygon</span></p>
-        <p className="mb-12">Next Cohort:<br/> <span className="text-primary font-sans-medium">Saturday 19th March 2022 - 20:00 UTC /15:00 EST</span></p>
+        <p className="mb-12">Next Cohort:<br/> <span className="text-primary font-sans-medium">Saturday 27th March 2022 - 14:00 UTC 19:30 IST</span></p>
         <form id="wf-form-fields[email]" name="wf-form-fields[email]" data-name="fields[email]" action="https://static.mailerlite.com/webforms/submit/r5s7m5" method="post" className='flex mb-12' aria-label="fields[email]">
           <input type="email" className="w-52 border-solid border-b border-primary mr-5 active:border-primary300 focus:border-primary300 !outline-none"  name="EMAIL" data-name="EMAIL" placeholder="Enter your email" id="EMAIL-4" required/>
           <input type="submit" value="Join the waitlist" data-wait="Please wait..." id="mc-embedded-subscribe-form" className='py-4 px-6 bg-primary rounded-md text-white hover:bg-primary400' /> 
