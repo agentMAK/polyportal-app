@@ -6,19 +6,20 @@ import twitter from '../../public/images/twitter.png'
 const NavBar = () => {
     return (
       <div className="top-0 w-full" >
-          <div className="flex max-w-screen-lg mx-auto justify-between pt-8">
-            <Link href="/" passHref><a>
+          <div className="flex justify-between px-6 py-2">
+            
             <Image
                 src={logo}
                 alt="Picture of the author"
-                width={168}
-                height={50}
-            /></a></Link>
+                width={108}
+                height={32}
+            />
             <a href="https://twitter.com/PolyPortalHQ">
             <Image
                 src={twitter}
                 alt="Picture of the author"
-                height={50}
+                height={32}
+                width={32}
             /></a>
         </div>
       </div>
