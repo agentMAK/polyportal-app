@@ -19,7 +19,8 @@ module.exports = {
         primary400: '#A673EF',
         primary100: '#F9F6FD',
         primary500: '#5211FF',
-        primary600: '#220D6D'
+        primary600: '#220D6D',
+        primary700: '#2C3857'
       }
     },
   },

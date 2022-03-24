@@ -10,56 +10,6 @@ const Home: NextPage = () => {
   return (
     <div>
       <Meta></Meta>
-      <div className="flex flex-col items-center max-w-screen-lg mx-auto text-center">
-        <h1 className='text-7xl mt-20 mb-8 font-sans-medium'>Learn and explore <br/> Web3</h1>
-        <p className="mb-8">Join our live instructor-led workshops teaching  <br/> the basics of Web3 for beginner&apos;s on <span className="text-primary font-sans-semibold">Polygon</span></p>
-        <p className="mb-12">Next Cohort:<br/> <span className="text-primary font-sans-medium">Saturday 26th March 2022 - 14:00 UTC 19:30 IST</span></p>
-        <form id="wf-form-fields[email]" name="wf-form-fields[email]" data-name="fields[email]" action="https://static.mailerlite.com/webforms/submit/r5s7m5" method="post" className='flex mb-12' aria-label="fields[email]">
-          <input type="email" className="w-52 border-solid border-b border-primary mr-5 active:border-primary300 focus:border-primary300 !outline-none bg-transparent"  name="EMAIL" data-name="EMAIL" placeholder="Enter your email" id="EMAIL-4" required/>
-          <input type="submit" value="Join the waitlist" data-wait="Please wait..." id="mc-embedded-subscribe-form" className='py-4 px-6 bg-primary rounded-md text-white hover:bg-primary400' /> 
-          </form>
-        <div className='flex content-start mb-10'>
-        <Image
-                src={uniswap}
-                alt="Uniswap Grants"
-                height={55}
-                width={86}
-            />
-        <Image
-                src={polygon}
-                alt="Polygon"
-                height={40}
-                width={128}
-            />
-        </div>
-        <div className="mb-44">
-          <Image
-                  src={doorway}
-                  alt="doorway"
-                  layout='intrinsic'
-           />
-        </div>
-        <div className="flex text-left w-full mb-32">
-            <div className=" w-full">
-              <h1 className="text-6xl font-sans-semibold">What is <span className="text-primary">POLYPORTAL</span>?</h1>
-            </div>
-            <div className=" w-full">
-              <h2 className="text-4xl font-sans-medium">A Community Onboarding Platform into Web3 on Polygon.</h2>
-              <br />
-              <p>👋  Hi, I&apos;m <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/agentMAK_"><span className='text-blue-400 font-sans-medium'>@agentMAK</span></a>, creator of PolyPortal and we&apos;re building better experiences for new users to Web3
-                <br /><br />
-                We all know that Web3 onboarding kind of sucks. As it exists today, there isn&apos;t a platform out there that 
-                I would recommend to my beginner Web2 friends trying to get into Web3. PolyPortal is our attempt to solve this 
-                problem.
-                <br /><br />
-                Polygon has a vast ecosystem of both users and applications. Combined with low fees and faster transactions, 
-                it&apos;s the perfect playground for new Web3 users 
-                <br /><br />
-                Our Introduction to Web3 course is designed for beginners wishing to understand 
-                Web3 and how to use it. </p>
-            </div>
-        </div>
-      </div>
     </div>
   )
 }
