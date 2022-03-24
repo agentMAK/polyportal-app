@@ -1,9 +1,11 @@
 import type { NextPage } from 'next'
-import uniswapCard from '../../../public/images/uniswapCard.png'
 import metamaskCard from '../../../public/images/metamaskCard.png'
-import openseaCard from '../../../public/images/openseaCard.png'
+import uniswapcard from '../../../public/images/uniswapCard.png'
+import blockchaincard from '../../../public/images/blockchaincard.png'
+import buycryptocard from '../../../public/images/buycryptocard.png'
+import polygoncard from '../../../public/images/polygoncard.png'
+import whatweb3card from '../../../public/images/whatweb3card.png'
 import MainHeader from '../../../components/elements/MainHeader'
-import NavBar from '../../../components/elements/NavBar'
 import Card from '../../../components/elements/Card'
 import Meta from '../../../components/meta'
 
@@ -13,18 +15,24 @@ const index: NextPage = () => {
   return (
     <div>
       <Meta title='PolyPortal - Beginner Guide to Web3'></Meta>
-      <NavBar></NavBar>
-      <div className="flex flex-col items-center max-w-screen-lg mx-auto text-left">
-      <MainHeader>The Beginners Journey into Web3</MainHeader>
-        <div className="flex flex-row w-full flex-wrap justify-around lg:justify-between">
-        
-            <Card title="Setup a wallet using Metamask" image={metamaskCard} link='/learn/web3/setupMetamask'></Card>
+        <div className="flex flex-col items-center max-w-screen-lg mx-auto text-left">
+        <MainHeader>Web3</MainHeader>
+          <div className="flex flex-row flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">
 
-            <Card title="Make a token swap on Uniswap" image={uniswapCard} link='/learn/web3/tokenSwap'></Card>
+          <Card title="Blockchain Basics" image={blockchaincard} link='/learn/web3/'></Card>
 
-            <Card title="Buy a NFT on Opensea" image={openseaCard} link='/learn/web3/buyNFT'></Card>
+          <Card title="Polygon" image={polygoncard} link=''></Card>
+
+          <Card title="What is Web3?" image={whatweb3card} link=''></Card>
+
+          <Card title="Setup Wallet" image={metamaskCard} link=''></Card>
+
+          <Card title="Buy Crypto" image={buycryptocard} link=''></Card>
+
+          <Card title="Try Uniswap" image={uniswapcard} link='https://app.uniswap.org/#/swap?chain=polygon'></Card>
+          </div>
         </div>
-      </div>
+      
     </div>
   )
 }
