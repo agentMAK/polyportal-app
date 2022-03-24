@@ -19,15 +19,15 @@ const index: NextPage = () => {
 
               <Card title="Web3" image={web3card} link='/learn/web3/'></Card>
 
-              <Card title="DeFi" image={deficard} link=''></Card>
+              <Card title="DeFi" image={deficard} status='disabled' link=''></Card>
 
-              <Card title="NFTs" image={nftscard} link=''></Card>
+              <Card title="NFTs" image={nftscard} status='disabled'link=''></Card>
 
-              <Card title="DAOs" image={daocard} link=''></Card>
+              <Card title="DAOs" image={daocard} status='disabled'link=''></Card>
 
-              <Card title="Metaverse" image={metaversecard} link=''></Card>
+              <Card title="Metaverse" image={metaversecard} status='disabled' link=''></Card>
 
-              <Card title="Music" image={musiccard} link=''></Card>
+              <Card title="Music" image={musiccard} status='disabled' link=''></Card>
           </div>
         </div>
       
