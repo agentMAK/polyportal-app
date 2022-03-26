@@ -25,9 +25,9 @@ const index: NextPage = () => {
 
           <Card title="What is Web3?" image={whatweb3card} status='disabled' link=''></Card>
 
-          <Card title="Setup Wallet" image={metamaskCard} link=''></Card>
+          <Card title="Setup Wallet" image={metamaskCard} link='https://metamask.io/download/'></Card>
 
-          <Card title="Buy Crypto" image={buycryptocard} status='disabled' link=''></Card>
+          <Card title="Buy Crypto" image={buycryptocard} link='https://global.transak.com/'></Card>
 
           <Card title="Try Uniswap" image={uniswapcard} link='https://app.uniswap.org/#/swap?chain=polygon'></Card>
           </div>
