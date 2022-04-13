@@ -1,33 +1,24 @@
 import type { NextPage } from 'next'
-import Card from '../../components/elements/Card'
 import MainHeader from '../../components/elements/MainHeader'
 import Meta from '../../components/meta'
-import web3card from '../../public/images/web3card.png'
-import deficard from '../../public/images/deficard.png'
-import daocard from '../../public/images/daocard.png'
-import metaversecard from '../../public/images/metaversecard.png'
-import musiccard from '../../public/images/musiccard.png'
-import nftscard from '../../public/images/nftscard.png'
+import web3Guide from '../../public/images/web3guide.png'
+import LongCard from '../../components/elements/LongCard'
 
 const index: NextPage = () => {
   return (
     <div>
       <Meta title="PolyPortal - Learn Web3"></Meta>
       <div className="flex flex-col items-center max-w-screen-lg mx-auto text-left">
-        <MainHeader>Web3 for Beginners</MainHeader>
-          <div className="flex flex-row flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">
-
-              <Card title="Web3" image={web3card} link='/learn/web3/'></Card>
-
-              <Card title="DeFi" image={deficard} status='disabled' link=''></Card>
-
-              <Card title="NFTs" image={nftscard} status='disabled'link=''></Card>
-
-              <Card title="DAOs" image={daocard} status='disabled'link=''></Card>
-
-              <Card title="Metaverse" image={metaversecard} status='disabled' link=''></Card>
-
-              <Card title="Music" image={musiccard} status='disabled' link=''></Card>
+        <MainHeader>Learn Web3</MainHeader>
+          <div className="flex flex-row flex-wrap justify-around lg:justify-between w-full max-w-screen-lg">
+            <LongCard
+            title = "The Complete Beginner&apos;s Guide to Web3"
+            time = "Approx. 30 mins"
+            link="/learn/web3"
+            image={web3Guide}>
+              <li>Learn how to setup your first Web3 wallet on Polygon using Metamask</li>
+              <li>Learn how to interact with dApps (Web3 applications) such as Uniswap, Opensea and others.</li>
+            </LongCard>
           </div>
         </div>
       
