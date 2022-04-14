@@ -19,17 +19,11 @@ const index: NextPage = () => {
         <MainHeader>Web3</MainHeader>
           <div className="flex flex-row flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">
 
-          <Card title="Blockchain Basics" image={blockchaincard} status='disabled' link='/learn/web3/'></Card>
+          <Card title="What is Web3?" image={whatweb3card} link='/learn/web3/what-is-web3'></Card>
 
-          <Card title="Polygon" image={polygoncard} status='disabled' link=''></Card>
+          <Card title="Understanding Tokens" image={metamaskCard} link='/learn/web3/setupmetamask'></Card>
 
-          <Card title="What is Web3?" image={whatweb3card} status='disabled' link=''></Card>
-
-          <Card title="Setup Wallet" image={metamaskCard} link='https://metamask.io/download/'></Card>
-
-          <Card title="Buy Crypto" image={buycryptocard} link='https://global.transak.com/'></Card>
-
-          <Card title="Try Uniswap" image={uniswapcard} link='https://app.uniswap.org/#/swap?chain=polygon'></Card>
+          <Card title="Exploring Web3" image={uniswapcard} link='/learn/web3/setupmetamask'></Card>
           </div>
         </div>
       

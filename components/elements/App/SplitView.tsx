@@ -1,15 +1,17 @@
 import Image from 'next/image'
 
 const SplitView = (props:any) => {
+
+    const imageProp = `h-full w-full relative`
     return (
-      <div className=' flex h-full'>
+      <div className='flex h-full mb-10'>
       <div className=' w-full flex justify-center items-center'>
-        <div className='h-fit w-fit mx-16'>
+        <div className={`h-full w-full relative mx-${props.margin}`}>
         <Image
               src={props.image}
-              alt="metamask"
-              height={300}
-              width={300}
+              alt=""
+              layout="fill"
+              objectFit='contain'
           />
             </div>
       </div>
@@ -23,4 +25,8 @@ const SplitView = (props:any) => {
   }
   
   export default SplitView
+  
+  SplitView.defaultProps = {
+    margin:'0'
+  }
   

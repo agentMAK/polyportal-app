@@ -1,6 +1,6 @@
-import AppHeader from "../elements/App/AppHeader"
-import SplitView from "../elements/App/SplitView"
-import metamaskLogo from '../../public/images/MetaMaskFox.png'
+import AppHeader from "../../../elements/App/AppHeader"
+import SplitView from "../../../elements/App/SplitView"
+import metamaskLogo from '../../../../public/images/metamaskFox.png'
 
 const L0_SetupMetamask = (props:any) => {
     return (<main className='w-full h-full flex flex-col'>
