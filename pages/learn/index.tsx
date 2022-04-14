@@ -4,7 +4,7 @@ import Meta from '../../components/meta'
 import web3Guide from '../../public/images/web3guide.png'
 import LongCard from '../../components/elements/LongCard'
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
   return (
     <div>
       <Meta title="PolyPortal - Learn Web3"></Meta>
@@ -19,15 +19,6 @@ const index: NextPage = () => {
               <li>Learn how to setup your first Web3 wallet on Polygon using Metamask</li>
               <li>Learn how to interact with dApps (Web3 applications) such as Uniswap, Opensea and others.</li>
             </LongCard>
-
-            <LongCard
-            title = "The Complete Beginner&apos;s Guide to Polygon"
-            time = "Approx. 30 mins"
-            link="/learn/web3"
-            image={web3Guide}>
-              <li>Learn how to setup your first Web3 wallet on Polygon using Metamask</li>
-              <li>Learn how to interact with dApps (Web3 applications) such as Uniswap, Opensea and others.</li>
-            </LongCard>
           </div>
         </div>
       
@@ -36,4 +27,4 @@ const index: NextPage = () => {
   )
 }
 
-export default index
+export default Index
