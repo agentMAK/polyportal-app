@@ -11,7 +11,7 @@ import P7 from '../../../../components/learn/web3/what-is-web3/P7'
 import Button from '../../../../components/elements/Button'
 import Meta from '../../../../components/meta'
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
 
   const nextLesson = () => {
     if(lesson < lessonPages.length-1) {
@@ -58,4 +58,4 @@ const index: NextPage = () => {
   )
 }
 
-export default index
+export default Index

@@ -8,7 +8,7 @@ import Meta from '../../../components/meta'
 
 
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
   return (
     <div>
       <Meta title='PolyPortal - Beginner Guide to Web3'></Meta>
@@ -28,4 +28,4 @@ const index: NextPage = () => {
   )
 }
 
-export default index
+export default Index

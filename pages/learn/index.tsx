@@ -21,7 +21,7 @@ const index: NextPage = () => {
             </LongCard>
 
             <LongCard
-            title = "The Complete Beginner&apos;s Guide to Web3"
+            title = "The Complete Beginner&apos;s Guide to Polygon"
             time = "Approx. 30 mins"
             link="/learn/web3"
             image={web3Guide}>
