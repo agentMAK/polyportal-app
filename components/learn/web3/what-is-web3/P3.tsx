@@ -3,11 +3,15 @@ import whatweb3 from '../../../../public/images/learn/web3/what-is-web3/whatweb3
 import MainHeader from "../../../elements/MainHeader"
 
 const P3 = (props:any) => {
-    return (<main className='w-full h-full flex flex-col'>
+    return (<main className='w-full h-full flex flex-col text-lg'>
         <MainHeader title="Web3">What is Web3?</MainHeader>
         <SplitView image={whatweb3}>
-              <p className='text-xl font-sans-semibold'>Web3 is the next generation of the internet</ p>
-              <p className=''>Let’s start by looking at how evolution of Web3</ p>
+              <p className='text-xl font-sans-semibold'>So, What&apos;s Web3</ p>
+              <p className=''>There are many definitions of Web3 that exist out there.</ p>
+              <br />
+              <p>
+              We are going to break down Web3 to its most fundamental definition for you.
+              </p>
         </SplitView>
       </main>
     )

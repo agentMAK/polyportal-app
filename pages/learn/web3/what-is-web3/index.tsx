@@ -38,7 +38,8 @@ const Index: NextPage = () => {
     {key:7, value:<P7 nextLesson={nextLesson} prevLesson={prevLesson}></P7>},
   ]
   
-  const isComplete = (lesson == lessonPages.length-1)
+  const isComplete = lesson == lessonPages.length-1
+  const isFirstLesson = lesson == 0
   
 
   return (
@@ -47,9 +48,11 @@ const Index: NextPage = () => {
       <Meta title='PolyPortal - What is Web3?'></Meta>
         <div className='m-auto h-full max-w-screen-lg flex flex-col justify-between'>
           {lessonPages[lesson].value}
-          <div className='w-full flex justify-between mb-64'>
-            <Button onClick={prevLesson}>Prev Lesson</Button>
-            {isComplete ? <Button variant='dark' link='/learn/web3'>Complete Lesson</Button> : <Button variant='dark' onClick={nextLesson}>Next Lesson</Button>}
+          <div className='w-full flex justify-between mb-28
+          '>
+           
+            {isFirstLesson ? <br/> :  <Button onClick={prevLesson}>Previous</Button>}
+            {isComplete ? <Button variant='dark' link='/learn/web3'>Complete Lesson</Button> : <Button variant='dark' onClick={nextLesson}>Next</Button>}
 
           </div>
         </div>

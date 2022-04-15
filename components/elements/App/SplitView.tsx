@@ -16,7 +16,7 @@ const SplitView = (props:any) => {
             </div>
       </div>
       <div className=' w-full flex justify-center items-center'>
-        <div className='h-fit w-fit mx-16'>
+        <div className='h-fit w-fit ml-10'>
           {props.children}
             </div>
       </div>
