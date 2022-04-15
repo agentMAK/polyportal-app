@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import polyportalLogo from '../public/images/polyportalName.svg'
 
 const Meta = (props:any) => {
@@ -29,6 +30,7 @@ const Meta = (props:any) => {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8247e5"/>
         <meta name="msapplication-TileColor" content="#dcd4ff"/>
         <meta name="theme-color" content="#ffffff"></meta>
+        
     </Head>
   )
 }

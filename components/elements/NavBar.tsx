@@ -45,18 +45,22 @@ const NavBar = () => {
                 height={32}
             /></a>
             </Link>
-            <nav className='flex flex-row justify-around bg-primary300 rounded-xl w-60 h-8 justify-self-center ml-[-76px] text-xs font-sans-semibold text-primary700'>
+            <nav className='flex flex-row justify-around bg-primary300 rounded-xl w-60 h-8 justify-self-center text-xs font-sans-semibold text-primary700'>
               <NavLink link='/access' inActive={true} isActive={navPath.startsWith('/access')} >Access</NavLink>
               <NavLink link='/learn'  isActive={navPath.startsWith('/learn')}>Learn</NavLink>
               <NavLink link='/explore' inActive={true} isActive={navPath.startsWith('/explore')}>Explore</NavLink>
             </nav>
-            <a href="https://twitter.com/PolyPortalHQ">
-            <Image
-                src={twitter}
-                alt="Picture of the author"
-                height={32}
-                width={32}
-            /></a>
+            <div className="flex flex-row justify-center content-center">
+            <a href='https://polyportal.upvoty.com/'><button className='bg-primary h-8 rounded-md text-sm px-2 ml-[-91px] font-sans-semibold text-white mr-3 hover:bg-primary400'>Product Roadmap</button></a>
+              <a href="https://twitter.com/PolyPortalHQ">
+              <Image
+                  src={twitter}
+                  alt="Picture of the author"
+                  height={32}
+                  width={32}
+              /></a>
+            
+            </div>
         </div>
       </div>
     )
