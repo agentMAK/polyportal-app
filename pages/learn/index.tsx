@@ -16,8 +16,8 @@ const Index: NextPage = () => {
             time = "Approx. 30 mins"
             link="/learn/web3"
             image={web3Guide}>
-              <li>Learn how to setup your first Web3 wallet on Polygon using Metamask</li>
-              <li>Learn how to interact with dApps (Web3 applications) such as Uniswap, Opensea and others.</li>
+              <li>Learn the core ideas and technologies of Web3</li>
+              <li>Learn about Web3 dApps and Tokens</li>
             </LongCard>
           </div>
         </div>

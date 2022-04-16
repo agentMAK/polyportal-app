@@ -11,7 +11,7 @@ const P1 = (props: any) => {
         <br />
         <p>
           Web1 was the first evolution of the internet, starting around the
-          1900s. Web1 was <strong className="font-sans-semibold">read only.</strong> This was
+          1900s. Web1 is <strong className="font-sans-semibold">read only.</strong> This was
           primarily in the form of static websites owned by companies.
         </p>
         <br />
