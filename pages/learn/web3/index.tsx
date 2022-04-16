@@ -1,9 +1,6 @@
 import type { NextPage } from 'next'
 import metamaskCard from '../../../public/images/metamaskCard.png'
 import uniswapcard from '../../../public/images/uniswapCard.png'
-import blockchaincard from '../../../public/images/blockchaincard.png'
-import buycryptocard from '../../../public/images/buycryptocard.png'
-import polygoncard from '../../../public/images/polygoncard.png'
 import whatweb3card from '../../../public/images/whatweb3card.png'
 import MainHeader from '../../../components/elements/MainHeader'
 import Card from '../../../components/elements/Card'
@@ -11,7 +8,7 @@ import Meta from '../../../components/meta'
 
 
 
-const index: NextPage = () => {
+const Index: NextPage = () => {
   return (
     <div>
       <Meta title='PolyPortal - Beginner Guide to Web3'></Meta>
@@ -19,17 +16,11 @@ const index: NextPage = () => {
         <MainHeader>Web3</MainHeader>
           <div className="flex flex-row flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">
 
-          <Card title="Blockchain Basics" image={blockchaincard} status='disabled' link='/learn/web3/'></Card>
+          <Card title="What is Web3?" image={whatweb3card} link='/learn/web3/what-is-web3'></Card>
 
-          <Card title="Polygon" image={polygoncard} status='disabled' link=''></Card>
+          <Card title="Understanding Tokens" image={metamaskCard} link='/learn/web3/what-is-web3' status='disabled'></Card>
 
-          <Card title="What is Web3?" image={whatweb3card} status='disabled' link=''></Card>
-
-          <Card title="Setup Wallet" image={metamaskCard} link='https://metamask.io/download/'></Card>
-
-          <Card title="Buy Crypto" image={buycryptocard} link='https://global.transak.com/'></Card>
-
-          <Card title="Try Uniswap" image={uniswapcard} link='https://app.uniswap.org/#/swap?chain=polygon'></Card>
+          <Card title="Exploring Web3" image={uniswapcard} link='/learn/web3/what-is-web3' status='disabled'></Card>
           </div>
         </div>
       
@@ -37,4 +28,4 @@ const index: NextPage = () => {
   )
 }
 
-export default index
+export default Index

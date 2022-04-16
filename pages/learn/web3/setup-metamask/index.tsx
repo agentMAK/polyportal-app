@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
 import { useState } from 'react'
-import L1_SetupMetamask from '../../../components/setupMetamask/L1_SetupMetamask'
-import L0_SetupMetamask from '../../../components/setupMetamask/L0_SetupMetamask'
-import Button from '../../../components/elements/Button'
-import AppNavBar from '../../../components/elements/AppNavBar'
-import Meta from '../../../components/meta'
+import L1_SetupMetamask from '../../../../components/learn/web3/setupMetamask/L1_SetupMetamask'
+import L0_SetupMetamask from '../../../../components/learn/web3/setupMetamask/L0_SetupMetamask'
+import Button from '../../../../components/elements/Button'
+import AppNavBar from '../../../../components/elements/AppNavBar'
+import Meta from '../../../../components/meta'
 
-const SetupMetamask: NextPage = () => {
+const Index: NextPage = () => {
 
   const nextLesson = () => {
     if(lesson < lessonPages.length-1) {
@@ -34,7 +34,6 @@ const SetupMetamask: NextPage = () => {
     <div>
       <div className='h-screen'>
       <Meta title='PolyPortal - Setup a wallet using Metamask'></Meta>
-        <AppNavBar>Setup a wallet using Metamask</AppNavBar>
         <div className='m-auto h-full max-w-screen-lg flex flex-col justify-between'>
           {lessonPages[lesson].value}
           <div className='w-full flex justify-between mb-64'>
@@ -48,4 +47,4 @@ const SetupMetamask: NextPage = () => {
   )
 }
 
-export default SetupMetamask
+export default Index

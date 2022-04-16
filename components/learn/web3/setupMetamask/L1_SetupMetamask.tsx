@@ -1,5 +1,4 @@
-import AppHeader from "../elements/App/AppHeader"
-import SingleView from "../elements/App/SingleView"
+import SingleView from "../../../elements/App/SingleView"
 
 const L1_SetupMetamask = (props:any) => {
         return (
