@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import metamaskCard from '../../../public/images/metamaskCard.png'
 import uniswapcard from '../../../public/images/uniswapCard.png'
 import whatweb3card from '../../../public/images/whatweb3card.png'
 import polygoncard from '../../../public/images/polygoncard.png'
@@ -21,7 +20,7 @@ const Index: NextPage = () => {
 
           <Card title="Understanding Tokens" image={polygoncard} link='/learn/web3/understanding-tokens'></Card>
 
-          <Card title="Exploring Web3" image={uniswapcard} link='/learn/web3/what-is-web3' status='disabled'></Card>
+          <Card title="Exploring Web3" image={uniswapcard} link='/learn/web3/exploring-web3'></Card>
           </div>
         </div>
       

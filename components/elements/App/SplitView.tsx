@@ -6,7 +6,7 @@ const SplitView = (props:any) => {
     return (
       <div className='flex h-full mb-10'>
       <div className=' w-full flex justify-center items-center'>
-        <div className={`h-full w-full relative mx-${props.margin}`}>
+        <div className={`h-full w-full relative mx-0 }`}>
         <Image
               src={props.image}
               alt=""
@@ -25,8 +25,4 @@ const SplitView = (props:any) => {
   }
   
   export default SplitView
-  
-  SplitView.defaultProps = {
-    margin:'0'
-  }
   
