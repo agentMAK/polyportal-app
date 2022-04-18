@@ -8,7 +8,7 @@ const Index: NextPage = () => {
   return (
     <div>
       <Meta title="PolyPortal - Learn Web3"></Meta>
-      <div className="flex flex-col items-center max-w-screen-lg mx-auto text-left">
+      <div className="flex flex-col items-center max-w-xs md:max-w-screen-md lg:max-w-screen-lg mx-auto text-left">
         <MainHeader>Learn Web3</MainHeader>
           <div className="flex flex-row flex-wrap justify-around lg:justify-between w-full max-w-screen-lg gap-10">
             <LongCard

@@ -45,7 +45,7 @@ const NavBar = () => {
                 height={32}
             /></a>
             </Link>
-            <nav className='flex flex-row justify-around bg-primary300 rounded-xl w-60 h-8 justify-self-center text-xs font-sans-semibold text-primary700'>
+            <nav className='flex-row justify-around bg-primary300 rounded-xl w-60 h-8 justify-self-center text-xs font-sans-semibold text-primary70 hidden md:flex'>
               <NavLink link='/access' inActive={true} isActive={navPath.startsWith('/access')} >Access</NavLink>
               <NavLink link='/learn'  isActive={navPath.startsWith('/learn')}>Learn</NavLink>
               <NavLink link='/explore' inActive={true} isActive={navPath.startsWith('/explore')}>Explore</NavLink>

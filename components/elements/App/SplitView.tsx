@@ -4,9 +4,9 @@ const SplitView = (props:any) => {
 
     const imageProp = `h-full w-full relative`
     return (
-      <div className='flex h-full mb-10'>
-      <div className=' w-full flex justify-center items-center'>
-        <div className={`h-full w-full relative mx-0 }`}>
+      <div className='flex flex-col md:flex-row h-full'>
+      <div className=' w-full md:h-auto h-96 mb-10 md:mb-0s flex justify-center items-center'>
+        <div className={`h-full w-full relative`}>
         <Image
               src={props.image}
               alt=""
@@ -16,7 +16,7 @@ const SplitView = (props:any) => {
             </div>
       </div>
       <div className=' w-full flex justify-center items-center'>
-        <div className='h-fit w-fit ml-10'>
+        <div className='h-fit md:mb-0 mb-40 w-fit md:ml-10'>
           {props.children}
             </div>
       </div>
@@ -25,4 +25,3 @@ const SplitView = (props:any) => {
   }
   
   export default SplitView
-  

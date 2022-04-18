@@ -14,7 +14,8 @@ const Index: NextPage = () => {
       <Meta title='PolyPortal - Beginner Guide to Web3'></Meta>
         <div className="flex flex-col items-center max-w-screen-lg mx-auto text-left">
         <MainHeader>Web3</MainHeader>
-          <div className="flex flex-row flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">
+
+          <div className="flex flex-col md:flex-row items-center flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">
 
           <Card title="What is Web3?" image={whatweb3card} link='/learn/web3/what-is-web3'></Card>
 

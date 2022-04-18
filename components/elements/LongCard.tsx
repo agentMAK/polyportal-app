@@ -18,8 +18,8 @@ const LongCard = (props:any) => {
       </div>
     </div>
     } else {
-      displayCard = <div className="flex flex-row w-full h-72 rounded-xl bg-primary">
-      <div className=" h-full w-2/5 p-7">
+      displayCard = <div className="flex flex-col md:flex-row items-center w-full rounded-xl bg-primary">
+      <div className=" h-full md:w-2/5 w-full p-7">
       <Image
           src={props.image}
           alt="metamask"
@@ -28,18 +28,18 @@ const LongCard = (props:any) => {
           layout="responsive"
       />
       </div>
-      <div className="flex flex-col h-full w-3/5 p-7">
+      <div className="flex flex-col h-full md:w-3/5 pb-7 md:p-7 text-center md:text-left">
           <div className="h-full text-white">
             <p className="font-sans-semibold text-2xl mb-1">{props.title}</p>
             <p className="text-xl mb-4">{props.time}</p>
-            <p className="text-[15px] list-decimal w-3/4">
+            <p className="text-[15px] list-decimal md:w-3/4">
               <ul className="list-disc ml-3">
                 {props.children}
             </ul></p>
           </div>
-          <div className="flex justify-end">
+          <div className="flex md:justify-end justify-center">
           <Link href={props.link}><a>
-          <button className="bg-white h-12 w-32 rounded-md font-sans-medium text-primary hover:bg-primary400 hover:text-white">Start Course</button>
+          <button className="bg-white h-12 w-32 rounded-md font-sans-medium mt-5 md:mt-0 text-primary hover:bg-primary400 hover:text-white">Start Course</button>
           </a></Link>
           </div>
       </div>
