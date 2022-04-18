@@ -17,7 +17,8 @@ const Index: NextPage = () => {
             link="/learn/web3"
             image={web3Guide}>
               <li>Learn the core ideas and technologies of Web3</li>
-              <li>Learn about Web3 dApps and Tokens</li>
+              <li>Learn about Web3 dApps, NFTs and Tokens</li>
+              <li>Learn about get involved in Web3</li>
             </LongCard>
           </div>
         </div>
