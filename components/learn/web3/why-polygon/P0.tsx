@@ -7,10 +7,10 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 const P0 = (props:any) => {
     return (<main className='w-full h-full flex flex-col text-lg'>
-        <MainHeader title="Web3">What is Web3?</MainHeader>
+        <MainHeader title="Web3">Why Polygon?</MainHeader>
           <LiteYouTubeEmbed 
-              id="BZljTVU8Vgw"
-              title="What is Web3?"
+              id="O7GmKeL1z84"
+              title="Why Polygon?"
               poster="maxresdefault"
           />
           <br />

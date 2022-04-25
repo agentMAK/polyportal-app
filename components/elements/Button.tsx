@@ -1,3 +1,4 @@
+import { link } from "fs"
 import Link from "next/link"
 
 const Button = (props:any) => {
@@ -8,7 +9,7 @@ const Button = (props:any) => {
     }
 
     if(props.link != undefined) {
-      button = <Link href="/learn/web3" passHref>{button}</Link>
+      button = <Link href={props.link} passHref>{button}</Link>
     }
     return (button
     )
