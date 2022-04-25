@@ -40,7 +40,7 @@ const Index: NextPage = () => {
           <div className='w-full flex justify-between pb-10'>
            
             {isFirstLesson ? <br/> :  <Button onClick={prevLesson}>Previous</Button>}
-            {isComplete ? <Button variant='dark' link='/learn/web3'>Complete Lesson</Button> : <Button variant='dark' onClick={nextLesson}>Next</Button>}
+            {isComplete ? <Button variant='dark' link='/learn/web3/old'>Complete Lesson</Button> : <Button variant='dark' onClick={nextLesson}>Next</Button>}
 
           </div>
         </div>

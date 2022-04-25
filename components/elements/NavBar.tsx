@@ -51,8 +51,8 @@ const NavBar = () => {
               <NavLink link='/explore' inActive={true} isActive={navPath.startsWith('/explore')}>Explore</NavLink>
             </nav>
             <div className="flex flex-row justify-center content-center">
-            <a href='https://polyportal.upvoty.com/'><button className='bg-primary h-8 rounded-md text-sm px-2 ml-[-91px] font-sans-semibold text-white mr-3 hover:bg-primary400'>Product Roadmap</button></a>
-              <a href="https://twitter.com/PolyPortalHQ">
+            <a href='https://polyportal.upvoty.com/' target="_blank" rel="noopener noreferrer"><button className='bg-primary h-8 rounded-md text-sm px-2 ml-[-91px] font-sans-semibold text-white mr-3 hover:bg-primary400'>Product Roadmap</button></a>
+              <a href="https://twitter.com/PolyPortalHQ" target="_blank" rel="noopener noreferrer">
               <Image
                   src={twitter}
                   alt="Picture of the author"

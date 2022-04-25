@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { useState } from 'react'
-import P0 from '../../../../components/learn/web3/what-is-web3/P0'
+import P0 from '../../../../components/learn/web3/why-polygon/P0'
 import Button from '../../../../components/elements/Button'
 import Meta from '../../../../components/meta'
 
