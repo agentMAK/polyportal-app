@@ -26,16 +26,16 @@ const LongCard = (props:any) => {
           height={188}
           width={300}
           layout="responsive"
+          priority={true}
       />
       </div>
       <div className="flex flex-col h-full md:w-3/5 pb-7 md:p-7 text-center md:text-left">
           <div className="h-full text-white">
             <p className="font-sans-semibold text-2xl mb-1">{props.title}</p>
             <p className="text-xl mb-4">{props.time}</p>
-            <p className="text-[15px] list-decimal md:w-3/4">
-              <ul className="list-disc ml-3">
+              <ul className="list-disc ml-3 text-[15px] md:w-3/4">
                 {props.children}
-            </ul></p>
+            </ul>
           </div>
           <div className="flex md:justify-end justify-center">
           <Link href={props.link}><a>

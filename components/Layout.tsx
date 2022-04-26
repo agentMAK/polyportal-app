@@ -1,8 +1,17 @@
 import NavBar from "./elements/NavBar"
 import Script from 'next/script'
+import { useSession } from "next-auth/react"
+import { useRouter } from "next/router"
+import React from "react"
 
 
 const Layout = ({ children }:any) => {
+  const { status } = useSession()
+  const router = useRouter()
+
+  if (status === "unauthenticated" && router.pathname != '/learn') {
+      router.push('/learn')
+  }
     return (
         <div>
             <Script
@@ -26,7 +35,8 @@ const Layout = ({ children }:any) => {
                 { children }
             </div>
         </div>
-    )
+    ) 
+
   }
 
 export default Layout
