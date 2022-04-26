@@ -5,7 +5,7 @@ import web3Guide from '../../public/images/web3guide.png'
 import LongCard from '../../components/elements/LongCard'
 import { useSession } from 'next-auth/react'
 import React from 'react'
-import Modal from '../../components/elements/modal'
+import Modal from '../../components/elements/Modal'
 
 const Index: NextPage = (props:any) => {
   const { status } = useSession()
