@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/images/polyportalName.svg"
-import discord from "../../public/images/discordIcon.svg";
-import twitter from "../../public/images/twitter.png";
 import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/react";
 import React from "react";
-import Modal from "./modal";
 import UserDropdown from "./UserDropdown";
 
 const NavLink = (props: any) => {
