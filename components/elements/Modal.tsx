@@ -29,7 +29,7 @@ const Modal = (props:any) => {
                     Thanks for your interest in PolyPortal
                   </p>
                   <p className="text-sm font-sans-base leading-relaxed">
-                    To get started, login or signup below. 
+                    To get started, login or sign up below. 
                   </p>
                 </div>
                 {/*footer*/}
