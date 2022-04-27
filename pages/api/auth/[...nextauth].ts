@@ -21,7 +21,7 @@ export default NextAuth({
 
       mixpanel.people.set(user.id, {$first_name: user.name});
       mixpanel.track('Sign In', { distinct_id: user.id,});
-    
+
     },
   }
 })
