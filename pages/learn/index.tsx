@@ -12,10 +12,9 @@ const Index: NextPage = (props:any) => {
   const { status } = useSession()
   
   let loggedIn = true
-  let showPolyPortalModal = true
+  let showPolyPortalModal = false
   if (status != "authenticated") {
     loggedIn = false
-    showPolyPortalModal = false
   }
 
   const [data, setData] = useState<any>(null)
@@ -32,9 +31,9 @@ const Index: NextPage = (props:any) => {
   }, [])
 
   
-  if (data != null && data.message == 'true') {
-     showPolyPortalModal = false
-   }
+  if (data != null && data.message != 'true' && loggedIn == true) {
+     showPolyPortalModal = true
+  }
 
     return (
       <div>
