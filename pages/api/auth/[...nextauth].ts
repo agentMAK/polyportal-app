@@ -15,7 +15,7 @@ export default NextAuth({
   events: {
     async signIn({ user, account, profile}) {
       var mixpanel = Mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL_PROJECT_ID}`, {
-        debug: true,
+        debug: false,
         api_host: "https://api-eu.mixpanel.com",
       });
 
