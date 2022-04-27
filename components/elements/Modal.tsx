@@ -26,7 +26,7 @@ const Modal = (props:any) => {
                 {/*body*/}
                 <div className="relative mx-6 mt-6 flex-auto">
                   <p className="text-sm font-sans-semibold leading-relaxed">
-                    Thanks for your interest in PolyPortal
+                    PolyPortal is currently in Beta
                   </p>
                   <p className="text-sm font-sans-base leading-relaxed">
                     To get started, login or sign up below. 
