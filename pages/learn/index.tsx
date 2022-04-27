@@ -4,16 +4,36 @@ import Meta from '../../components/meta'
 import web3Guide from '../../public/images/web3guide.png'
 import LongCard from '../../components/elements/LongCard'
 import { useSession } from 'next-auth/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from '../../components/elements/Modal'
-import mixpanel from  'mixpanel-browser'
+import GuildModal from '../../components/elements/GuildModal'
 
 const Index: NextPage = (props:any) => {
   const { status } = useSession()
   
   let loggedIn = true
+  let showPolyPortalModal = true
   if (status != "authenticated") {
     loggedIn = false
+    showPolyPortalModal = false
+  }
+
+  const [data, setData] = useState<any>(null)
+  const [isLoading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    fetch('api/check-guild')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data)
+        setLoading(false)
+      })
+  }, [])
+
+  
+  if (data != null && data.message == 'true' && loggedIn == true) {
+     showPolyPortalModal = false
   }
 
     return (
@@ -34,6 +54,7 @@ const Index: NextPage = (props:any) => {
             </div>
           </div>
         {!loggedIn ? <Modal /> : null}
+        {showPolyPortalModal ? <GuildModal /> : null}
 
       </div>
     )

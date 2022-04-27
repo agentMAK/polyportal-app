@@ -15,7 +15,7 @@ export default NextAuth({
   events: {
     async signIn({ user, account, profile}) {
       var mixpanel = Mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL_PROJECT_ID}`, {
-        debug: true,
+        debug: false,
         api_host: "https://api-eu.mixpanel.com",
       });
 
@@ -23,5 +23,19 @@ export default NextAuth({
       mixpanel.track('Sign In', { distinct_id: user.id,});
 
     },
+  },
+  callbacks: {
+    async jwt({ token, account }) {
+      // Persist the OAuth access_token to the token right after signin
+      if (account) {
+        token.accessToken = account.access_token
+      }
+      return token
+    },
+    async session({ session, token, user }) {
+      // Send properties to the client, like an access_token from a provider.
+      session.accessToken = token.accessToken
+      return session
+    }
   }
 })
