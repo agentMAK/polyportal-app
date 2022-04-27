@@ -6,13 +6,14 @@ import LongCard from '../../components/elements/LongCard'
 import { useSession } from 'next-auth/react'
 import React from 'react'
 import Modal from '../../components/elements/Modal'
+import mixpanel from  'mixpanel-browser'
 
 const Index: NextPage = (props:any) => {
   const { status } = useSession()
   
-  let showModal = true;
-  if (status == "authenticated") {
-    showModal = false
+  let loggedIn = true
+  if (status != "authenticated") {
+    loggedIn = false
   }
 
     return (
@@ -32,7 +33,7 @@ const Index: NextPage = (props:any) => {
               </LongCard>
             </div>
           </div>
-        {showModal ? <Modal /> : null}
+        {!loggedIn ? <Modal /> : null}
 
       </div>
     )
