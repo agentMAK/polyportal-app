@@ -48,7 +48,7 @@ const Index: NextPage = () => {
       <Meta title='PolyPortal - What is Web3?'></Meta>
         <div className='m-auto h-full max-w-xs md:max-w-screen-md lg:max-w-screen-lg  flex flex-col justify-between'>
           {lessonPages[lesson].value}
-          <div className='w-full flex justify-between mb-16 pb-10'>
+          <div className='w-full flex justify-between mb-8 pb-10'>
            
             {isFirstLesson ? <br/> :  <Button onClick={prevLesson}>Previous</Button>}
             {isComplete ? <Button variant='dark' link='/learn/web3/old'>Complete Lesson</Button> : <Button variant='dark' onClick={nextLesson}>Next</Button>}
