@@ -20,8 +20,8 @@ export default NextAuth({
       });
 
       mixpanel.people.set(user.id, {$first_name: user.name});
-      mixpanel.track('Sign in', { distinct_id: user.id,});
-    
+      mixpanel.track('Sign In', { distinct_id: user.id,});
+
     },
   }
 })
