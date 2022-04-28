@@ -50,7 +50,7 @@ const Modal = (props:any) => {
                     Join our Discord Server
                   </p>
                   <p className="text-sm font-sans-base leading-relaxed">
-                  To access content, become a member of the PolyPortal Discord Server (it's free)
+                  To access content, become a member of the PolyPortal Discord Server (it&apos;s free)
                   </p>
                 </div>
                 {/*footer*/}
