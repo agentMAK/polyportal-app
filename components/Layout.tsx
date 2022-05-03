@@ -8,9 +8,14 @@ import React from "react"
 const Layout = ({ children }:any) => {
   const { status } = useSession()
   const router = useRouter()
+  let appLayout = false
 
   if (status === "unauthenticated" && router.pathname != '/learn') {
       router.push('/learn')
+  }
+
+  if (router.pathname.startsWith("/app")) {
+    appLayout = true
   }
     return (
         <div>
@@ -30,10 +35,10 @@ const Layout = ({ children }:any) => {
           `,
             }}
           />
-            <NavBar></NavBar>
-            <div className="w-full h-screen bg-gradient-to-b from-primary500/10">
+            {!appLayout ? <NavBar></NavBar> : null}
+            {!appLayout ? <div className="w-full h-screen bg-gradient-to-b from-primary500/10">
                 { children }
-            </div>
+            </div> : children }
         </div>
     ) 
 
