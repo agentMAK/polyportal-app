@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import Meta from "../meta";
-import Lesson from "./DisplaySlides";
-import Web3_1 from './lessons/Web3_1'
+import Meta from "../../../components/meta";
+import DisplaySlides from "../../../components/app/DisplaySlides";
+import Web3_1 from '../../../components/app/lessons/Web3_1'
 import { useEffect, useState } from "react";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../../../components/app/ProgressBar";
 
-const Lesson = (props: any) => {
+const Test: NextPage = (props: any) => {
 
   const slides = Web3_1()
 
@@ -32,7 +32,7 @@ const Lesson = (props: any) => {
         <ProgressBar nextSlide={nextSlide} previousSlide={previousSlide} percentageDone={percentageDone}></ProgressBar>
       </div>
       <div className="max-w-md mx-auto mt-20">
-        <Lesson slides={slides} redirect="/learn/web3" currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></Lesson>
+        <DisplaySlides slides={slides} redirect="/learn/web3" currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></DisplaySlides>
       </div>
     </div>
   );
