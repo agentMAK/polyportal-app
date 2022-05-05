@@ -14,7 +14,7 @@ const Layout = ({ children }:any) => {
       router.push('/learn')
   }
 
-  if (router.pathname.startsWith("/app")) {
+  if (router.pathname.includes("/lesson/")) {
     appLayout = true
   }
     return (

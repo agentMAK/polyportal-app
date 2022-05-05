@@ -1,18 +1,16 @@
 import type { NextPage } from "next";
 import Meta from "../meta";
-import Lesson from "./DisplaySlides";
+import DisplaySlides from "./DisplaySlides";
 import Web3_1 from './lessons/Web3_1'
 import { useEffect, useState } from "react";
 import ProgressBar from "./ProgressBar";
 
 const Lesson = (props: any) => {
 
-  const slides = Web3_1()
-
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide < slides.getTotalSlides() ? prevCurrentSlide +1 : slides.getTotalSlides());
+    setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide < props.slides.getTotalSlides() ? prevCurrentSlide +1 : props.slides.getTotalSlides());
   };
 
   const previousSlide = () => {
@@ -22,20 +20,19 @@ const Lesson = (props: any) => {
     window.scrollTo(0, 0)
   },[currentSlide]);
 
-  let percentageDone = currentSlide/(slides.getTotalSlides())*100
+  let percentageDone = currentSlide/(props.slides.getTotalSlides())*100
 
 
   return (
     <div className="pt-20">
-      <Meta title="PolyPortal - Learn Web3"></Meta>
       <div className='flex flex-row justify-center content-end h-20 w-full border-b-4 fixed top-0 bg-white z-50'>
         <ProgressBar nextSlide={nextSlide} previousSlide={previousSlide} percentageDone={percentageDone}></ProgressBar>
       </div>
       <div className="max-w-md mx-auto mt-20">
-        <Lesson slides={slides} redirect="/learn/web3" currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></Lesson>
-      </div>
+        <DisplaySlides slides={props.slides} redirect={props.redirect} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></DisplaySlides>
+      </div> 
     </div>
   );
 };
 
-export default Test;
+export default Lesson;

@@ -17,7 +17,7 @@ const Index: NextPage = () => {
 
           <div className="flex flex-col md:flex-row items-center flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">
 
-          <Card title="What is Web3?" image={whatweb3card} link='/learn/web3/web3'></Card>
+          <Card title="What is Web3?" image={whatweb3card} link='/learn/web3/lesson/what-is-web3'></Card>
 
           <Card title="Understanding Tokens" image={polygoncard} link='/learn/web3/understanding-tokens'></Card>
 
