@@ -10,7 +10,7 @@ const Lesson = (props: any) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide < props.slides.getTotalSlides() ? prevCurrentSlide +1 : props.slides.getTotalSlides());
+    setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide < props.slides.getTotalSlides() +1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()+1);
   };
 
   const previousSlide = () => {
@@ -20,8 +20,7 @@ const Lesson = (props: any) => {
     window.scrollTo(0, 0)
   },[currentSlide]);
 
-  let percentageDone = currentSlide/(props.slides.getTotalSlides())*100
-
+  let percentageDone = currentSlide/(props.slides.getTotalSlides()+1)*100
 
   return (
     <div className="pt-20">

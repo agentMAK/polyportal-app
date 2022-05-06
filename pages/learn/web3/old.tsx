@@ -19,9 +19,9 @@ const Index: NextPage = () => {
 
           <Card title="What is Web3?" image={whatweb3card} link='/learn/web3/lesson/what-is-web3'></Card>
 
-          <Card title="Understanding Tokens" image={polygoncard} link='/learn/web3/understanding-tokens'></Card>
+          <Card title="Understanding Tokens" image={polygoncard} link='/learn/web3/lesson/understanding-tokens'></Card>
 
-          <Card title="Exploring Web3" image={uniswapcard} link='/learn/web3/exploring-web3'></Card>
+          <Card title="Exploring Web3" image={uniswapcard} link='/learn/web3/lesson/exploring-web3'></Card>
 
           </div>
         </div>

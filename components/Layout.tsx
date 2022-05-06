@@ -23,6 +23,7 @@ const Layout = ({ children }:any) => {
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
+          <Script src="https://player.vimeo.com/api/player.js"></Script>
           <Script id="google"
             dangerouslySetInnerHTML={{
               __html: `
