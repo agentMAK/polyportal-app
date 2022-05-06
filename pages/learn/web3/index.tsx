@@ -20,15 +20,15 @@ const Index: NextPage = () => {
 
           <div className="flex flex-col md:flex-row items-center flex-wrap justify- lg:justify-start w-[625px] gap-x-12 gap-y-10">
 
-          <Card title="Introduction" image={computercard} link='/learn/web3/introduction'></Card>
+          <Card title="Introduction" image={computercard} link='/learn/web3/lesson/introduction-to-web3'></Card>
 
-          <Card title="Why Polygon?" image={polygoncard} link='/learn/web3/why-polygon'></Card>
+          <Card title="Why Polygon?" image={polygoncard} link='/learn/web3/lesson/why-polygon'></Card>
 
-          <Card title="What is Web3?" image={blockchaincard} link='/learn/web3/what-is-web3'></Card>
+          <Card title="What is Web3?" image={blockchaincard} link='/learn/web3/lesson/what-is-web3-video'></Card>
 
-          <Card title="Core idea of Web3" image={whatisweb3card} link='/learn/web3/core-ideas-of-web3'></Card>
+          <Card title="Core idea of Web3" image={whatisweb3card} link='/learn/web3/lesson/core-ideas-of-web3'></Card>
 
-          <Card title="DApps, NFTs and Tokens" image={nftscard} link='/learn/web3/dapps-nfts-tokens'></Card>
+          <Card title="DApps, NFTs and Tokens" image={nftscard} link='/learn/web3/lesson/dapps-nfts-tokens'></Card>
 
           </div>
         </div>

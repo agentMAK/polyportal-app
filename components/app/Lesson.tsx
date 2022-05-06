@@ -1,25 +1,37 @@
-import React, { useState } from "react";
-import Slide from "./Slide";
+import type { NextPage } from "next";
+import Meta from "../meta";
+import DisplaySlides from "./DisplaySlides";
+import Web3_1 from './lessons/Web3_1'
+import { useEffect, useState } from "react";
+import ProgressBar from "./ProgressBar";
 
-const LessonTest = (props: any) => {
+const Lesson = (props: any) => {
 
-  const [focusSlide, setFocusSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    setFocusSlide((prevFocusSlide:any) => prevFocusSlide +1);
+    setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide < props.slides.getTotalSlides() +1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()+1);
   };
 
-  let slides = [{key:0, value:<Slide isStart={true} nextSlide={nextSlide} ref={(el:any) => props.slides.getRef(1).current = el}> {props.slides.getStartSlide()} </Slide>}];
-  for (let i =  1; i < props.slides.getSlidesNo() ; i++) {
-     slides.push({key:i, value:<Slide nextSlide={nextSlide} ref={(el:any) => props.slides.getRef(i).current = el} > {props.slides.getSlide(i)} </Slide>})
-   }
-   slides.push({key:slides.length, value:<Slide isEnd={true} redirect={props.redirect} nextSlide={nextSlide} ref={(el:any) => props.slides.getRef(1).current = el}> {props.slides.getEndSlide()} </Slide>})
+  const previousSlide = () => {
+    setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide > 0 ? prevCurrentSlide - 1: 0);
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  },[currentSlide]);
+
+  let percentageDone = currentSlide/(props.slides.getTotalSlides()+1)*100
 
   return (
-    <div>
-          {slides[focusSlide].value}
+    <div className="pt-20">
+      <div className='flex flex-row justify-center content-end h-20 w-full border-b-4 fixed top-0 bg-white z-50'>
+        <ProgressBar nextSlide={nextSlide} previousSlide={previousSlide} percentageDone={percentageDone}></ProgressBar>
+      </div>
+      <div className="max-w-md mx-auto mt-20">
+        <DisplaySlides slides={props.slides} redirect={props.redirect} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></DisplaySlides>
+      </div> 
     </div>
   );
 };
 
-export default LessonTest;
+export default Lesson;

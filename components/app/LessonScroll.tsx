@@ -4,7 +4,7 @@ import Slide from "./Slide";
 
 
 
-const LessonTest = (props: any) => {
+const LessonScroll = (props: any) => {
 
   const refArray = props.refs
 
@@ -36,4 +36,4 @@ const LessonTest = (props: any) => {
   );
 };
 
-export default LessonTest;
+export default LessonScroll;

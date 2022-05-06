@@ -1,5 +1,5 @@
 import React, { createRef } from "react";
-import Lesson from "./Lesson";
+import Lesson from "./DisplaySlides";
 
 class Slides {
   slidesArray: Array<any>
@@ -52,7 +52,7 @@ class Slides {
     return this.slidesArray[index].value.ref
   }
 
-  getSlidesNo() {
+  getTotalSlides() {
     return this.slidesArray.length
   }
 }

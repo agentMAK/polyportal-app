@@ -17,11 +17,11 @@ const Index: NextPage = () => {
 
           <div className="flex flex-col md:flex-row items-center flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">
 
-          <Card title="What is Web3?" image={whatweb3card} link='/learn/web3/web3'></Card>
+          <Card title="What is Web3?" image={whatweb3card} link='/learn/web3/lesson/what-is-web3'></Card>
 
-          <Card title="Understanding Tokens" image={polygoncard} link='/learn/web3/understanding-tokens'></Card>
+          <Card title="Understanding Tokens" image={polygoncard} link='/learn/web3/lesson/understanding-tokens'></Card>
 
-          <Card title="Exploring Web3" image={uniswapcard} link='/learn/web3/exploring-web3'></Card>
+          <Card title="Exploring Web3" image={uniswapcard} link='/learn/web3/lesson/exploring-web3'></Card>
 
           </div>
         </div>
