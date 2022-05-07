@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Meta from '../../components/header/meta'
-import web3Guide from '../../public/images/web3guide.png'
+import web3Guide from '../../public/images/lessons/web3/web3guide.png'
 import { useSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 import Modal from '../../components/main/modal/Modal'
