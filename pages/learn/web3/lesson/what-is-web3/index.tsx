@@ -6,7 +6,7 @@ import Lesson from "../../../../../components/app/Lesson";
 const index: NextPage = (props: any) => {
   return (<>
     <Meta title="PolyPortal - Learn Web3"></Meta>
-    <Lesson slides={Web3_1()} redirect="/learn/web3/old"></Lesson>
+    <Lesson slides={Web3_1()} redirect="/learn/web3/"></Lesson>
     </>
   );
 };

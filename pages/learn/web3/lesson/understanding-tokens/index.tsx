@@ -6,7 +6,7 @@ import Web3_2 from "../../../../../components/app/lessons/Web3_2";
 const index: NextPage = (props: any) => {
   return (<>
     <Meta title="PolyPortal - Understanding Tokens"></Meta>
-    <Lesson slides={Web3_2()} redirect="/learn/web3/old"></Lesson>
+    <Lesson slides={Web3_2()} redirect="/learn/web3/"></Lesson>
     </>
   );
 };
