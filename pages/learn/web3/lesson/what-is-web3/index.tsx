@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
-import Meta from "../../../../../components/meta"
-import Web3_1 from '../../../../../components/app/lessons/Web3_1'
-import Lesson from "../../../../../components/app/Lesson";
+import Meta from "../../../../../components/header/meta"
+import Web3_1 from '../../../../../components/lessons/web3/Web3_1'
+import Lesson from "../../../../../components/app/lesson/Lesson";
 
 const index: NextPage = (props: any) => {
   return (<>

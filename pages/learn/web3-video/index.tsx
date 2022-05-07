@@ -1,13 +1,11 @@
 import type { NextPage } from 'next'
-import uniswapcard from '../../../public/images/uniswapCard.png'
-import whatisweb3card from '../../../public/images/whatweb3card.png'
-import nftscard from '../../../public/images/nftscard.png'
-import computercard from '../../../public/images/computercard.png'
-import blockchaincard from '../../../public/images/blockchaincard.png'
-import polygoncard from '../../../public/images/polygoncard.png'
-import MainHeader from '../../../components/elements/MainHeader'
-import Card from '../../../components/elements/Card'
-import Meta from '../../../components/meta'
+import whatisweb3card from '../../../public/images/cards/whatweb3card.png'
+import nftscard from '../../../public/images/cards/nftscard.png'
+import computercard from '../../../public/images/cards/computercard.png'
+import blockchaincard from '../../../public/images/cards/blockchaincard.png'
+import polygoncard from '../../../public/images/cards/polygoncard.png'
+import Card from '../../../components/main/Card'
+import Meta from '../../../components/header/meta'
 
 
 
@@ -16,7 +14,9 @@ const Index: NextPage = () => {
     <div>
       <Meta title='PolyPortal - Beginner Guide to Web3'></Meta>
         <div className="flex flex-col items-center max-w-screen-lg mx-auto text-left">
-        <MainHeader>The Complete Beginner&apos;s Guide to Web3</MainHeader>
+        <div className="w-full py-12 text-center">
+          <p className="font-sans-semibold text-[28px] text-primary600">The Complete Beginner&apos;s Guide to Web3</p>
+        </div>
 
           <div className="flex flex-col md:flex-row items-center flex-wrap justify- lg:justify-start w-[625px] gap-x-12 gap-y-10">
 

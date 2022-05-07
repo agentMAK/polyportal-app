@@ -1,5 +1,5 @@
-import leftArrow from '../../public/images/leftArrow.svg'
-import rightArrow from '../../public/images/rightArrow.svg'
+import leftArrow from '../../public/images/icons/leftArrow.svg'
+import rightArrow from '../../public/images/icons/rightArrow.svg'
 import Image from 'next/image'
 
 const ProgressBar = (props:any) => {

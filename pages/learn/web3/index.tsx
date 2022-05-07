@@ -1,10 +1,9 @@
 import type { NextPage } from 'next'
-import uniswapcard from '../../../public/images/uniswapCard.png'
-import whatweb3card from '../../../public/images/whatweb3card.png'
-import polygoncard from '../../../public/images/polygoncard.png'
-import MainHeader from '../../../components/elements/MainHeader'
-import Card from '../../../components/elements/Card'
-import Meta from '../../../components/meta'
+import uniswapcard from '../../../public/images/cards/uniswapCard.png'
+import whatweb3card from '../../../public/images/cards/whatweb3card.png'
+import polygoncard from '../../../public/images/cards/polygoncard.png'
+import Card from '../../../components/main/Card'
+import Meta from '../../../components/header/meta'
 
 
 
@@ -13,7 +12,9 @@ const Index: NextPage = () => {
     <div>
       <Meta title='PolyPortal - Beginner Guide to Web3'></Meta>
         <div className="flex flex-col items-center max-w-screen-lg mx-auto text-left">
-        <MainHeader>Web3</MainHeader>
+        <div className="w-full py-12 text-center">
+          <p className="font-sans-semibold text-[28px] text-primary600">Web3</p>
+        </div>
 
           <div className="flex flex-col md:flex-row items-center flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">
 
