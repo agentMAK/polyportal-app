@@ -22,6 +22,7 @@ module.exports = {
         primary600: '#220D6D',
         primary700: '#2C3857',
         secondary:"E2E4E8",
+        primary100:"ECE8FF",
       }
     },
   },

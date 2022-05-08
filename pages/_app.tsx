@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import '../styles/general-sans.css'
 import type { AppProps } from 'next/app'
-import Layout from '../components/Layout'
+import Layout from '../components/header/Layout'
 import useHotjar from 'react-use-hotjar';
 import React from 'react';
 import { SessionProvider } from 'next-auth/react';
