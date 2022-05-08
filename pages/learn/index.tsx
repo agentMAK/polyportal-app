@@ -31,36 +31,30 @@ const Index: NextPage = (props: any) => {
         </div>
         <div className="flex flew-row gap-x-[60px] flex-wrap justify-center gap-y-10 pt-24">
           <CourseCard image={web3} title="Web3 for Beginners" link="/learn/web3-video">
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum
-            dolor sit amet. Lorem ipsum dolor sit amet
+            What is Web3? How does it works? And how do I take advantage of the opportunities available. Let introduce you.
           </CourseCard>
-          <CourseCard image={metamask} title="Using Metamask" status="disabled">
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum
-            dolor sit amet. Lorem ipsum dolor sit amet
+          <CourseCard image={metamask} title="Setup a Metamask" status="disabled">
+            Metamask is the web3 wallet used to interact with decentralised application. Learn how to get setup and start using Metamask.
           </CourseCard>
           <CourseCard image={nft} title="NFTs on Polygon" status="disabled">
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum
-            dolor sit amet. Lorem ipsum dolor sit amet
+            There are thousands of NFT projects in Crypto. The starter guide will help you navigate the space.
           </CourseCard>
           <CourseCard
             image={dao}
             title="Introduction to DAOs"
             status="disabled"
           >
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum
-            dolor sit amet. Lorem ipsum dolor sit amet
+            DAOs stand for Decentralised Autonomous Organisations. It's a new type of organsation built on the internet with participants from around the world. Let's explore.
           </CourseCard>
           <CourseCard
             image={metaverse}
             title="Explore the Metaverse"
             status="disabled"
           >
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum
-            dolor sit amet. Lorem ipsum dolor sit amet
+            The Metaverse is coming. Get familiar with the space now and the new possibilies that the Meteverse enables.
           </CourseCard>
           <CourseCard image={aave} title="How to use Aave" status="disabled">
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum
-            dolor sit amet. Lorem ipsum dolor sit amet
+            Aave is the decentralised lending protocol. You can both borrow crypto from Aave or lend your crypto to earn interest. Get to know Aave.
           </CourseCard>
         </div>
         
