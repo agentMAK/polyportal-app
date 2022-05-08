@@ -88,7 +88,7 @@ const Index: NextPage = (props: any) => {
           </div>
           <div className="w-fit bg-blue">
             <p className="text-sm my-auto mr-3">
-              <a href="/">Terms and Conditions</a> &nbsp; &nbsp; &nbsp;{" "}
+              <Link href="/"><a>Terms and Conditions</a></Link> &nbsp; &nbsp; &nbsp;{" "}
               <a href="/privacy-policy"  target="_blank" rel="noopener noreferrer" >Privacy Policy</a>{" "}
             </p>
           </div>
