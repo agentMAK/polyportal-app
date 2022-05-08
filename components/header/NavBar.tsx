@@ -90,7 +90,7 @@ const NavBar = () => {
             ) : null
           ) : (
             <button
-              className=" bg-white w-44 sm:w-52 h-9 text-primary border border-primary text-sm shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500"
+              className=" bg-white w-40 sm:w-52 h-9 text-primary border border-primary sm:text-sm text-xs shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500"
               onClick={() => signIn("discord")}
             >
               <div className="flex justify-center gap-x-2">
