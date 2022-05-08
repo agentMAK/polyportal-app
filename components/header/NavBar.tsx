@@ -56,7 +56,7 @@ const NavBar = () => {
 
   return (
     <div className="top-0 w-full h-20 fixed bg-white z-50">
-      <div className="flex w-full h-full justify-between content-center items-center px-9">
+      <div className="flex w-full h-full justify-between content-center items-center px-4 sm:px-9">
         <Link href="/learn" passHref>
           <a className="h-fit w-fit">
             <Image
