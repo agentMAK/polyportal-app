@@ -56,7 +56,7 @@ const NavBar = () => {
 
   return (
     <div className="top-0 w-full h-20 fixed bg-white z-50">
-      <div className="flex w-full h-full justify-between content-center items-center px-9">
+      <div className="flex w-full h-full justify-between content-center items-center px-4 sm:px-9">
         <Link href="/learn" passHref>
           <a className="h-fit w-fit">
             <Image
@@ -90,7 +90,7 @@ const NavBar = () => {
             ) : null
           ) : (
             <button
-              className=" bg-white w-52 h-9 text-primary border border-primary text-sm shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500"
+              className=" bg-white w-44 sm:w-52 h-9 text-primary border border-primary text-sm shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500"
               onClick={() => signIn("discord")}
             >
               <div className="flex justify-center gap-x-2">
