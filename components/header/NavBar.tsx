@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/images/logo/polyportalName.svg"
+import logo from "../../public/images/logo/PolyPortalLogo.svg";
 import { useRouter } from "next/router";
-import { useSession} from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import discord from "../../public/images/icons/discordIcon.svg";
 import React from "react";
 import UserDropdown from "./UserDropdown";
 
@@ -54,50 +55,55 @@ const NavBar = () => {
   const { data: session, status } = useSession();
 
   return (
-    <div className="top-0 w-full">
-      <div className="flex justify-between px-6 py-2">
+    <div className="top-0 w-full h-20 fixed bg-white z-50">
+      <div className="flex w-full h-full justify-between content-center items-center px-9">
         <Link href="/learn" passHref>
-          <a className="p-0 m-0 flex">
+          <a className="h-fit w-fit">
             <Image
               src={logo}
-              alt="Picture of the author"
-              width={108}
+              alt="PolyPortal Logo"
+              width={140}
               height={32}
+              layout="fixed"
             />
           </a>
         </Link>
-        <nav className="flex-row justify-around bg-primary300 rounded-xl w-60 h-8 justify-self-center text-xs font-sans-semibold text-primary70 hidden md:flex">
-          <NavLink
-            link="/access"
-            inActive={true}
-            isActive={navPath.startsWith("/access")}
-          >
-            Access
-          </NavLink>
-          <NavLink link="/learn" isActive={navPath.startsWith("/learn")}>
-            Learn
-          </NavLink>
-          <NavLink
-            link="/explore"
-            inActive={true}
-            isActive={navPath.startsWith("/explore")}
-          >
-            Explore
-          </NavLink>
-        </nav>
-        <div className="flex flex-row justify-center content-center">
-          <a
-            href="https://polyportal.upvoty.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="bg-primary h-8 rounded-md text-sm px-2 ml-[-91px] font-sans-semibold text-white mr-3 hover:bg-primary400">
-              Product Roadmap
+        <div className="sm:flex justify-center gap-x-11 h-fit my-auto pl-[116px] hidden">
+          <Link href="/learn" passHref>
+            <p className="text-xl text-primary600 font-sans-semibold opacity-25">
+              Access
+            </p>
+          </Link>
+          <Link href="/learn" passHref>
+            <a className="text-xl text-primary600 font-sans-semibold">Learn</a>
+          </Link>
+          <Link href="/learn" passHref>
+            <p className="text-xl text-primary600 font-sans-semibold opacity-25">
+              Explore
+            </p>
+          </Link>
+        </div>
+        <div className="flex justify-end w-64">
+          {session ? (
+            session.user ? (
+              <UserDropdown image={session.user.image} />
+            ) : null
+          ) : (
+            <button
+              className=" bg-white w-52 h-9 text-primary border border-primary text-sm shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500"
+              onClick={() => signIn("discord")}
+            >
+              <div className="flex justify-center gap-x-2">
+                <Image
+                  src={discord}
+                  alt="Picture of the author"
+                  width={18}
+                  height={18}
+                />
+                Sign in with Discord
+              </div>
             </button>
-          </a>
-           {session ? (session.user ? <UserDropdown image={session.user.image}/> : null ) : null}
-          
-          
+          )}
         </div>
       </div>
     </div>

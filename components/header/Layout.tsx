@@ -3,7 +3,7 @@ import Script from 'next/script'
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/router"
 import React from "react"
-import NewNavBar from "./NewNavBar"
+import NewNavBar from "./NavBar"
 
 
 const Layout = ({ children }:any) => {
@@ -33,7 +33,7 @@ const Layout = ({ children }:any) => {
           `,
             }}
           />
-            {!appLayout ? <NewNavBar></NewNavBar> : null}
+            {!appLayout ? <NavBar></NavBar> : null}
             {!appLayout ? <div className="w-full h-screen bg-gradient-to-b from-primary500/10"><div className="pt-20">
                 { children }
             </div></div> :children }

@@ -20,7 +20,7 @@ const Index: NextPage = (props: any) => {
   return (
     <div>
       <Meta title="PolyPortal - Learn Web3"></Meta>
-      <div className="max-w-screen-lg mx-auto">
+      <div className="lg:max-w-screen-lg sm:max-w-screen-sm md:max-w-screen-md mx-auto">
         <div className="text-center">
           <p className="mt-28 font-sans-semibold text-5xl text-primary600">
             Learn Web3 on Polygon
@@ -64,7 +64,7 @@ const Index: NextPage = (props: any) => {
           </CourseCard>
         </div>
         
-        <div className="flex flex-col items-center md:flex-row md:items-start gap-y-3 h-5 w-full justify-between pb-32 mt-52">
+        <div className="flex flex-col items-center md:flex-row md:items-start gap-y-6 h-5 w-full justify-between pb-32 mt-52">
             <div className="md:hidden">
               <a className="mr-3" href="https://twitter.com/PolyPortalHQ">
                 <Image src={twitter} alt="Twitter" height={20} width={20} />
