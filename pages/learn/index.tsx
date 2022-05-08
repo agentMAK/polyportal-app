@@ -20,7 +20,7 @@ const Index: NextPage = (props: any) => {
   return (
     <div>
       <Meta title="PolyPortal - Learn Web3"></Meta>
-      <div className="lg:max-w-screen-lg sm:max-w-screen-sm md:max-w-screen-md mx-auto">
+      <div className="lg:max-w-screen-lg max-w-xs sm:max-w-screen-sm md:max-w-screen-md mx-auto">
         <div className="text-center">
           <p className="mt-28 font-sans-semibold text-5xl text-primary600">
             Learn Web3 on Polygon
