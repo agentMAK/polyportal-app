@@ -44,7 +44,7 @@ const Index: NextPage = (props: any) => {
             title="Introduction to DAOs"
             status="disabled"
           >
-            DAOs stand for Decentralised Autonomous Organisations. It's a new type of organsation built on the internet with participants from around the world. Let's explore.
+            DAOs stand for Decentralised Autonomous Organisations. It&apos;s a new type of organsation built on the internet with participants from around the world. Let&apos;s explore.
           </CourseCard>
           <CourseCard
             image={metaverse}
