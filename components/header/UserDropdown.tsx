@@ -29,13 +29,13 @@ const UserDropdown = (props:any) => {
         }}
       >
         <div className="items-center flex">
-          <span className=" w-8 h-8 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
+          <span className="w-[42px] h-[42px] text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
             <Image
               alt="..."
               className="w-full rounded-full align-middle border-none shadow-lg"
               src={props.image}
-              width={32}
-              height={32}
+              width={42}
+              height={42}
             />
           </span>
         </div>

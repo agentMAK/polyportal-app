@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import uniswapcard from '../../../public/images/cards/uniswapCard.png'
-import whatweb3card from '../../../public/images/cards/whatweb3card.png'
-import polygoncard from '../../../public/images/cards/polygoncard.png'
+import uniswapcard from '../../../public/images/cards-old/uniswapCard.png'
+import whatweb3card from '../../../public/images/cards-old/whatweb3card.png'
+import polygoncard from '../../../public/images/cards-old/polygoncard.png'
 import Card from '../../../components/main/Card'
 import Meta from '../../../components/header/meta'
 

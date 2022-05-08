@@ -3,16 +3,13 @@ import Script from 'next/script'
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/router"
 import React from "react"
+import NewNavBar from "./NewNavBar"
 
 
 const Layout = ({ children }:any) => {
   const { status } = useSession()
   const router = useRouter()
   let appLayout = false
-
-  if (status === "unauthenticated" && router.pathname != '/learn') {
-      router.push('/learn')
-  }
 
   if (router.pathname.includes("/lesson/")) {
     appLayout = true
@@ -36,10 +33,10 @@ const Layout = ({ children }:any) => {
           `,
             }}
           />
-            {!appLayout ? <NavBar></NavBar> : null}
-            {!appLayout ? <div className="w-full h-screen bg-gradient-to-b from-primary500/10">
+            {!appLayout ? <NewNavBar></NewNavBar> : null}
+            {!appLayout ? <div className="w-full h-screen bg-gradient-to-b from-primary500/10"><div className="pt-20">
                 { children }
-            </div> : children }
+            </div></div> :children }
         </div>
     ) 
 

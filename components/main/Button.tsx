@@ -8,9 +8,9 @@ const Button = (props:any) => {
     }
 
     if (props.size == 's') {
-      button = <button className=' bg-white px-5 h-8 text-primary border border-primary text-sm shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={(e) => props.onClick()}>{props.children}</button>
+      button = <button className=' bg-white px-5 h-9 text-primary border border-primary text-sm shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={(e) => props.onClick()}>{props.children}</button>
       if(props.variant != 'light') {
-        button = <button className=' bg-primary px-5 h-8 text-white text-sm font-sans-medium rounded-md hover:bg-primary400 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={(e) => props.onClick()}>{props.children}</button>
+        button = <button className=' bg-primary px-5 h-9 text-white text-sm font-sans-medium rounded-md hover:bg-primary400 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={(e) => props.onClick()}>{props.children}</button>
       }
     }
 

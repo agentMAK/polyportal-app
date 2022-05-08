@@ -1,15 +1,45 @@
 import type { NextPage } from 'next'
-import whatisweb3card from '../../../public/images/cards/whatweb3card.png'
-import nftscard from '../../../public/images/cards/nftscard.png'
-import computercard from '../../../public/images/cards/computercard.png'
-import blockchaincard from '../../../public/images/cards/blockchaincard.png'
-import polygoncard from '../../../public/images/cards/polygoncard.png'
+import whatisweb3card from '../../../public/images/cards-old/whatweb3card.png'
+import nftscard from '../../../public/images/cards-old/nftscard.png'
+import computercard from '../../../public/images/cards-old/computercard.png'
+import blockchaincard from '../../../public/images/cards-old/blockchaincard.png'
+import polygoncard from '../../../public/images/cards-old/polygoncard.png'
 import Card from '../../../components/main/Card'
 import Meta from '../../../components/header/meta'
+import { useSession } from 'next-auth/react'
+import { useEffect, useState } from 'react'
+import Modal from '../../../components/main/modal/Modal'
+import GuildModal from '../../../components/main/modal/GuildModal'
 
 
 
 const Index: NextPage = () => {
+  const { status } = useSession()
+  
+  let loggedIn = true
+  let showPolyPortalModal = true
+  if (status != "authenticated") {
+    loggedIn = false
+    showPolyPortalModal = false
+  }
+
+  const [data, setData] = useState<any>(null)
+  const [isLoading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    fetch('api/check-guild')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data)
+        setLoading(false)
+      })
+  }, [])
+
+  
+  if (data != null && data.message == 'true' && loggedIn == true) {
+     showPolyPortalModal = false
+  }
   return (
     <div>
       <Meta title='PolyPortal - Beginner Guide to Web3'></Meta>
@@ -32,7 +62,8 @@ const Index: NextPage = () => {
 
           </div>
         </div>
-      
+        {!loggedIn ? <Modal /> : null}
+        {/* {showPolyPortalModal ? <GuildModal /> : null} */}
     </div>
   )
 }
