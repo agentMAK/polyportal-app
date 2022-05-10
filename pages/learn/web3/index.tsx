@@ -10,10 +10,10 @@ import Meta from '../../../components/header/meta'
 const Index: NextPage = () => {
   return (
     <div>
-      <Meta title='PolyPortal - Beginner Guide to Web3'></Meta>
+      <Meta title='PolyPortal - A Beginner Guide to Web3'></Meta>
         <div className="flex flex-col items-center max-w-screen-lg mx-auto text-left">
         <div className="w-full py-12 text-center">
-          <p className="font-sans-semibold text-[28px] text-primary600">Web3</p>
+          <p className="font-sans-semibold text-[28px] text-primary-900">Web3</p>
         </div>
 
           <div className="flex flex-col md:flex-row items-center flex-wrap justify-around lg:justify-between w-[625px] gap-y-10">

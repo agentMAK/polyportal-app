@@ -14,7 +14,7 @@ const Modal = (props:any) => {
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col bg-white outline-none focus:outline-none w-[350px]">
                 {/*header*/}
-                <div className="flex items-start justify-between p-4 bg-primary300 rounded-t-lg">
+                <div className="flex items-start justify-between p-4 bg-primary-300 rounded-t-lg">
                   <Image
                     src={logo}
                     alt="Picture of the author"
@@ -33,7 +33,7 @@ const Modal = (props:any) => {
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-center m-6  rounded-b">
-                <button className=' bg-white w-full h-9 text-primary border border-primary text-sm shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={() => signIn("discord")}>
+                <button className=' bg-white w-full h-9 text-primary-500 border border-primary-500 text-sm shadow font-sans-medium rounded-md hover:bg-primary-100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={() => signIn("discord")}>
                 <div className="flex justify-center gap-x-2">
                 <Image
                     src={discord}

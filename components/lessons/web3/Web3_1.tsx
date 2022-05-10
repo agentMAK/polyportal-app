@@ -74,7 +74,7 @@ Let’s start by looking at how evolution of Web3
       <HeaderBlock>Web2 - Read and write</HeaderBlock>
       <TextBlock>
         The next generation of the internet was Web2, starting in around 2004.
-        The primary capabilities the web2 introduced was abilty to both read and
+        The primary-500 capabilities the web2 introduced was abilty to both read and
         write on the internet. In particular, was the evolution of
         user-generated content. Anyone in the world could publish content online
         that could be seen by millions.

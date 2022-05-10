@@ -8,7 +8,7 @@ const Modal = (props:any) => {
     const router = useRouter()
     const [joinDiscordClicked, setJoinDiscordClicked] = React.useState(false);
 
-    const joinDiscordButton = <a className="w-full"target="_blank" href="https://discord.gg/DTeRCGuHKq" rel="noopener noreferrer"><button className=' bg-white w-full h-9 text-primary border border-primary text-sm shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={() => setJoinDiscordClicked(true)}>
+    const joinDiscordButton = <a className="w-full"target="_blank" href="https://discord.gg/DTeRCGuHKq" rel="noopener noreferrer"><button className=' bg-white w-full h-9 text-primary-500 border border-primary-500 text-sm shadow font-sans-medium rounded-md hover:bg-primary-100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={() => setJoinDiscordClicked(true)}>
       <div className="flex justify-center gap-x-2">
       <Image
           src={discord}
@@ -21,7 +21,7 @@ const Modal = (props:any) => {
         </button>
       </a>
 
-  const refreshButton = <button className=' bg-white w-full h-9 text-primary border border-primary text-sm shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={() => router.reload()}>
+  const refreshButton = <button className=' bg-white w-full h-9 text-primary-500 border border-primary-500 text-sm shadow font-sans-medium rounded-md hover:bg-primary-100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500' onClick={() => router.reload()}>
     Refresh the page
     </button>
     return (
@@ -33,7 +33,7 @@ const Modal = (props:any) => {
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col bg-white outline-none focus:outline-none w-[350px]">
                 {/*header*/}
-                <div className="flex items-start justify-between p-4 bg-primary300 rounded-t-lg">
+                <div className="flex items-start justify-between p-4 bg-primary-300 rounded-t-lg">
                   <Image
                     src={logo}
                     alt="Picture of the author"
