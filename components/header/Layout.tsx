@@ -33,7 +33,7 @@ const Layout = ({ children }:any) => {
             }}
           />
             {!appLayout ? <NavBar></NavBar> : null}
-            {!appLayout ? <div className="w-full h-screen bg-gradient-to-b from-primary500/10"><div className="pt-20">
+            {!appLayout ? <div className="w-full bg-primary-100"><div className="pt-20">
                 { children }
             </div></div> :children }
         </div>

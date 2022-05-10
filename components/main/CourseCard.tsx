@@ -14,7 +14,7 @@ const Card = (props:any) => {
             width={280}
             height={175}
           /></div>
-      <p className="text-xl text-primary font-sans-semibold pt-5">{props.title}</p>
+      <p className="text-xl text-primary-500 font-sans-semibold pt-5">{props.title}</p>
       <p className="font-sans-medium text-sm pt-1 pb-8">{props.children}</p>
       <Button size='s'>Coming Soon</Button>
 
@@ -28,7 +28,7 @@ const Card = (props:any) => {
             width={280}
             height={175}
           /></div>
-      <p className="text-xl text-primary font-sans-semibold pt-5">{props.title}</p>
+      <p className="text-xl text-primary-500 font-sans-semibold pt-5">{props.title}</p>
       <p className="font-sans-medium text-sm pt-1 pb-8">{props.children}</p>
       <Button size='s' link={props.link}>Start Course</Button>
 

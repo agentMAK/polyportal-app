@@ -13,8 +13,8 @@ const Card = (props:any) => {
             width={300}
         />
       <div className="flex flex-col justify-center rounded-br-xl rounded-bl-xl h-[55px] mt-[-2px] w-full text-center bg-white ">
-        {/* <div className="bg-primary h-full w-full m-4"></div> */}
-        <p className='font-sans-semibold text-[15px] text-primary'>{props.title}</p>
+        {/* <div className="bg-primary-500 h-full w-full m-4"></div> */}
+        <p className='font-sans-semibold text-[15px] text-primary-500'>{props.title}</p>
       </div>
     </div>
     } else {
@@ -26,9 +26,9 @@ const Card = (props:any) => {
                 height={188}
                 width={300}
             />
-          <div className="flex flex-col justify-center rounded-br-xl rounded-bl-xl h-[55px] mt-[-2px] w-full text-center bg-white group-hover:bg-primary group-hover:border-primary group-hover:border-solid group-hover:border-4 ">
-            {/* <div className="bg-primary h-full w-full m-4"></div> */}
-            <p className='font-sans-semibold text-[15px] text-primary group-hover:text-white'>{props.title}</p>
+          <div className="flex flex-col justify-center rounded-br-xl rounded-bl-xl h-[55px] mt-[-2px] w-full text-center bg-white group-hover:bg-primary-500 group-hover:border-primary-500 group-hover:border-solid group-hover:border-4 ">
+            {/* <div className="bg-primary-500 h-full w-full m-4"></div> */}
+            <p className='font-sans-semibold text-[15px] text-primary-500 group-hover:text-white'>{props.title}</p>
           </div>
         </div>
       </a></Link>

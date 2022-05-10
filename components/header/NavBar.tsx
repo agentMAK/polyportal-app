@@ -70,15 +70,15 @@ const NavBar = () => {
         </Link>
         <div className="sm:flex justify-center gap-x-11 h-fit my-auto pl-[116px] hidden">
           <Link href="/learn" passHref>
-            <p className="text-xl text-primary600 font-sans-semibold opacity-25">
+            <p className="text-xl text-primary-900 font-sans-semibold opacity-25">
               Access
             </p>
           </Link>
           <Link href="/learn" passHref>
-            <a className="text-xl text-primary600 font-sans-semibold">Learn</a>
+            <a className="text-xl text-primary-900 font-sans-semibold">Learn</a>
           </Link>
           <Link href="/learn" passHref>
-            <p className="text-xl text-primary600 font-sans-semibold opacity-25">
+            <p className="text-xl text-primary-900 font-sans-semibold opacity-25">
               Explore
             </p>
           </Link>
@@ -88,11 +88,9 @@ const NavBar = () => {
             session.user ? (
               <UserDropdown image={session.user.image} />
             ) : null
-          ) : (
+          ) : ( <a href="https://discord.gg/DTeRCGuHKq" target="_blank" rel="noopener noreferrer">
             <button
-              className=" bg-white w-40 sm:w-52 h-9 text-primary border border-primary sm:text-sm text-xs shadow font-sans-medium rounded-md hover:bg-primary100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500"
-              onClick={() => signIn("discord")}
-            >
+              className=" bg-white w-40 sm:w-52 h-9 text-primary-500 border border-primary-500 sm:text-sm text-xs shadow font-sans-medium rounded-md hover:bg-primary-100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500">
               <div className="flex justify-center gap-x-2">
                 <Image
                   src={discord}
@@ -100,9 +98,9 @@ const NavBar = () => {
                   width={18}
                   height={18}
                 />
-                Sign in with Discord
+                Join our Discord
               </div>
-            </button>
+            </button></a>
           )}
         </div>
       </div>

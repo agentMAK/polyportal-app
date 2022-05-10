@@ -36,7 +36,7 @@ const ContentSlides = () => {
             href="https://app.uniswap.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans-semibold text-primary hover:underline"
+            className="font-sans-semibold text-primary-500 hover:underline"
           > www.app.uniswap.org
           </a>
       </TextBlock>
@@ -56,7 +56,7 @@ const ContentSlides = () => {
             href="https://app.pooltogether.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans-semibold text-primary hover:underline"
+            className="font-sans-semibold text-primary-500 hover:underline"
           > app.pooltogether.com
           </a>
       </TextBlock>
@@ -76,7 +76,7 @@ const ContentSlides = () => {
             href="https://opensea.io/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans-semibold text-primary hover:underline"
+            className="font-sans-semibold text-primary-500 hover:underline"
           > opensea.io
           </a>
       </TextBlock>
@@ -96,7 +96,7 @@ const ContentSlides = () => {
             href="https://app.aave.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans-semibold text-primary hover:underline"
+            className="font-sans-semibold text-primary-500 hover:underline"
           > app.aave.com
           </a>
       </TextBlock>

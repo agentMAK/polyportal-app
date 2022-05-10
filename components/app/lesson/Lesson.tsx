@@ -20,7 +20,7 @@ const Lesson = (props: any) => {
   let percentageDone = currentSlide/(props.slides.getTotalSlides()+1)*100
 
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-primary-100">
       <div className='flex flex-row justify-center content-end h-20 w-full border-b-4 fixed top-0 bg-white z-50'>
         <ProgressBar nextSlide={nextSlide} previousSlide={previousSlide} percentageDone={percentageDone}></ProgressBar>
       </div>
