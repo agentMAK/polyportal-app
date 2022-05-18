@@ -1,28 +1,30 @@
-import NavBar from "./NavBar"
-import Script from 'next/script'
-import { useSession } from "next-auth/react"
-import { useRouter } from "next/router"
-import React from "react"
-import NewNavBar from "./NavBar"
+import NavBar from "./NavBar";
+import Script from "next/script";
+import { getSession, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 
-const Layout = ({ children }:any) => {
-  const { status } = useSession()
-  const router = useRouter()
-  let appLayout = false
+const Layout = ({ children }: any) => {
+  const { status } = useSession();
+  const router = useRouter();
+  let layout = "main";
 
   if (router.pathname.includes("/lesson/")) {
-    appLayout = true
+    layout = "app";
+  } else if (router.pathname.includes("/login")) {
+    layout = "blank";
   }
-    return (
-        <div>
-            <Script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-          />
-          <Script id="google"
-            dangerouslySetInnerHTML={{
-              __html: `
+
+  return (
+    <div>
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      <Script
+        id="google"
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -30,15 +32,20 @@ const Layout = ({ children }:any) => {
               page_path: window.location.pathname,
             });
           `,
-            }}
-          />
-            {!appLayout ? <NavBar></NavBar> : null}
-            {!appLayout ? <div className="w-full bg-primary-100"><div className="pt-20">
-                { children }
-            </div></div> :children }
+        }}
+      />
+      {layout === "main" ? <NavBar></NavBar> : null}
+      {layout === "blank" ? (
+        children
+      ) : (
+        <div className="w-full bg-primary-100">
+          <div className="pt-20">{children}</div>
         </div>
-    ) 
+      )}
+    </div>
+  );
+};
 
-  }
+export default Layout;
 
-export default Layout
+

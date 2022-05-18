@@ -1,11 +1,7 @@
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import Meta from "../../components/header/meta";
-import { useSession } from "next-auth/react";
+import { getSession, useSession } from "next-auth/react";
 import React, { useEffect, useState } from "react";
-import Modal from "../../components/main/modal/Modal";
-import GuildModal from "../../components/main/modal/GuildModal";
-import Image from "next/image";
-import Link from "next/link";
 import web3 from "../../public/images/cards/web3card.png";
 import CourseCard from "../../components/main/CourseCard";
 import dao from "../../public/images/cards/daocard.png";
@@ -13,8 +9,6 @@ import aave from "../../public/images/cards/aavecard.png";
 import metaverse from "../../public/images/cards/metaversecard.png";
 import nft from "../../public/images/cards/nftcard.png";
 import metamask from "../../public/images/cards/metamaskcard.png";
-import discord from "../../public/images/icons/discordlogo.svg";
-import twitter from "../../public/images/icons/twitterlogo.svg";
 import Footer from "../../components/main/Footer";
 
 const Index: NextPage = (props: any) => {
