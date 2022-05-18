@@ -77,7 +77,7 @@ export const getServerSideProps: GetServerSideProps = async (context: any) => {
     };
   }
 
-  const res = await fetch("http://localhost:3000/api/check-guild", {
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/check-guild`, {
     method: "POST",
     body: JSON.stringify({ accessToken: session.accessToken }),
     headers: { "Content-type": "application/json; charset=UTF-8" },
