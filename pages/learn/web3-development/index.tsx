@@ -149,7 +149,7 @@ const Index: NextPage = () => {
             Start Building
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard>How to create a NFTs on Polygon</LessonCard>
+            <LessonCard>How to create a NFT on Polygon</LessonCard>
             <LessonCard>How to create your own token on Polygon</LessonCard>
             <LessonCard>How to build a play-to-earn game on Polygon</LessonCard>
           </div>
@@ -163,7 +163,7 @@ const Index: NextPage = () => {
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-6 justify-center items-center mt-32">
             <Button
               variant="dark"
-              link="/learn/web3-video/lesson/introduction-to-web3"
+              onClick={() => setShowModal(true)}
             >
               Start Course
             </Button>
