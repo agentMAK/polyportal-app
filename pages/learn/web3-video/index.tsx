@@ -1,14 +1,11 @@
-import type { GetServerSideProps, NextPage } from "next";
+import type { NextPage } from "next";
 import Meta from "../../../components/header/meta";
-import { getSession, useSession } from "next-auth/react";
-import { useEffect, useState } from "react";
-import Modal from "../../../components/main/modal/Modal";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import web3 from "../../../public/images/cards/web3card.png";
 import Button from "../../../components/main/Button";
 import Footer from "../../../components/main/Footer";
 import Link from "next/link";
-import GuildModal from "../../../components/main/modal/GuildModal";
 
 
 const LessonCard = (props: any) => {

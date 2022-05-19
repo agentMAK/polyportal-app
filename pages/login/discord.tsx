@@ -33,13 +33,14 @@ const Index: NextPage = (props: any) => {
       <div className="h-screen bg-primary-100">
         <div className="flex flex-col items-center lg:max-w-screen-lg max-w-xs sm:max-w-screen-sm md:max-w-screen-md mx-auto h-full">
           <div className="pt-11">
-            <Image
+          <Link href="/learn" passHref><a><Image
               src={logo}
               alt="PolyPortal Logo"
               width={220}
               height={50}
               layout="fixed"
-            />
+              priority
+            /></a></Link>
           </div>
           <div className="pt-32">
               {/*content*/}

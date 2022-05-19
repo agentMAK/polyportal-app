@@ -25,8 +25,11 @@ const Index: NextPage = (props: any) => {
           </p>
         </div>
         <div className="flex flew-row gap-x-[60px] flex-wrap justify-center gap-y-10 pt-20 pb-52">
-          <CourseCard image={web3} title="Web3 for Beginners" link="/learn/web3-video">
+          {/* <CourseCard image={web3} title="Web3 for Beginners" link="/learn/web3-video">
             What is Web3? How does it works? And how do I take advantage of the opportunities available. Let introduce you.
+          </CourseCard> */}
+          <CourseCard image={web3} title="Become a Web3 Developer on Polygon" link="/learn/web3-development">
+           Interested in become a web3 developer. Create your every own NFTs and Tokens on Polygon.
           </CourseCard>
           <CourseCard image={metamask} title="Setup Metamask" status="disabled">
             Metamask is the web3 wallet used to interact with decentralised application. Learn how to get setup and start using Metamask.
