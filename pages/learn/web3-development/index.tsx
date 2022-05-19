@@ -149,7 +149,7 @@ const Index: NextPage = () => {
             Start Building
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard>How to create a NFTs on Polygon</LessonCard>
+            <LessonCard>How to create a NFT on Polygon</LessonCard>
             <LessonCard>How to create your own token on Polygon</LessonCard>
             <LessonCard>How to build a play-to-earn game on Polygon</LessonCard>
           </div>
