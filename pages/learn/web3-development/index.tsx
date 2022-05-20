@@ -81,8 +81,7 @@ const Index: NextPage = () => {
 
   return (
     <div>
-      <Meta title="PolyPortal - A Beginner Guide to Web3"></Meta>
-
+      <Meta title="PolyPortal - Become a Web3 Developer on Polygon"></Meta>
       <div className="w-full pt-20 pb-44 sm:py-20 bg-primary-500">
         <div className="lg:max-w-screen-lg max-w-xs sm:max-w-screen-sm md:max-w-screen-md mx-auto h-[590px] md:h-[540px] lg:h-fit">
           <div className="flex flex-row flex-wrap h-80 w-full justify-center lg:justify-between items-center gap-y-10">
