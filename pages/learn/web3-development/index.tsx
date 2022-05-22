@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Meta from "../../../components/header/meta";
-import { useSession } from "next-auth/react";
 
 import Image from "next/image";
 import web3 from "../../../public/images/cards/web3card.png";
@@ -49,14 +48,14 @@ const LessonCard = (props: any) => {
               /></a></Link>
               </div>
               <div className="w-full">
-                {/* <Link href={props.link}> */}
-                  <a  onClick={() => props.setShowModal(true)} className="text-xl font-sans-semibold text-primary-900 hover:text-primary-500">
+                <Link href={props.link}>
+                  <a className="text-xl font-sans-semibold text-primary-900 hover:text-primary-500">
                     {props.children}
                   </a>
-                {/* </Link> */}
+                </Link>
               </div>
               <div className="w-1/6 md:block hidden">
-                <Button size="s" onClick={() => props.setShowModal(true)}>
+                <Button size="s">
                   Start
                 </Button>
               </div>
@@ -121,7 +120,7 @@ const Index: NextPage = () => {
             Getting Started
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard link='/learn/web3-development' setShowModal={setShowModal}>Introduction to Web3</LessonCard>
+            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3' setShowModal={setShowModal}>Introduction to Web3</LessonCard>
               <SubLesson>What is Web3?</SubLesson>
               <SubLesson>Growth of Web3</SubLesson>
               <SubLesson>Job demand in Web3</SubLesson>

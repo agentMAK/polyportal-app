@@ -46,7 +46,7 @@ const Slide = React.forwardRef((props: any, ref: any) => {
   }
 
   return (
-    <div className="w-full min-h-[900px]" ref={ref}>
+    <div className="w-full min-h-[700px]" ref={ref}>
       {props.children}
       {button}
       <br />
