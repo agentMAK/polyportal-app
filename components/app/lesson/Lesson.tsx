@@ -1,13 +1,24 @@
 import DisplaySlides from "./DisplaySlides";
 import { useEffect, useState } from "react";
 import ProgressBar from "../ProgressBar";
+import mixpanel from 'mixpanel-browser';
 
 const Lesson = (props: any) => {
+
+  mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL_PROJECT_ID}`, {debug: true});
+
+  useEffect(() => {
+    mixpanel.track('Start Lesson', {"Lesson": "Introduction to Web3", "Course":"Web3 Development"});
+  },[]);
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
     setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide < props.slides.getTotalSlides() +1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()+1);
+    console.log(currentSlide)
+    if(currentSlide == props.slides.getTotalSlides()) {
+      mixpanel.track('End Lesson', {"Lesson": "Introduction to Web3", "Course":"Web3 Development"});
+    }
   };
 
   const previousSlide = () => {
