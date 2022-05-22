@@ -2,10 +2,16 @@ import DisplaySlides from "./DisplaySlides";
 import { useEffect, useState } from "react";
 import ProgressBar from "../ProgressBar";
 import mixpanel from 'mixpanel-browser';
+import { getSession, useSession } from "next-auth/react";
 
 const Lesson = (props: any) => {
 
+  const { data: session } = useSession()
+
   mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL_PROJECT_ID}`, {debug: true});
+  if(session) {
+    mixpanel.identify(`${session.id}`);
+  }
 
   useEffect(() => {
     mixpanel.track('Start Lesson', {"Lesson": "Introduction to Web3", "Course":"Web3 Development"});

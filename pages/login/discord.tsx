@@ -88,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async (context: any) => {
   if (data.message == "true") {
     return {
       redirect: {
-        destination: "learn/web3-development",
+        destination: "/learn/web3-development",
         permanent: false,
       },
     };
