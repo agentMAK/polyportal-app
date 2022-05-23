@@ -36,7 +36,7 @@ const ContentSlides = () => {
   slides.addSlide(
     <SlideContent>
       <SubHeaderBlock>What is Web3?</SubHeaderBlock>
-      <TextBlock>Web3 is the next generation of the internet. It's based on decentralization, user ownership, and blockchain technology.</TextBlock>
+      <TextBlock>Web3 is the next generation of the internet. It&apos;s based on decentralization, user ownership, and blockchain technology.</TextBlock>
       <ImageBlock image={web3start}></ImageBlock>
       <TextBlock>To understand Web3 further, let take a look at each previous evolution of the internet</TextBlock>
     </SlideContent>
