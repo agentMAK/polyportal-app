@@ -36,9 +36,9 @@ const ContentSlides = () => {
   slides.addSlide(
     <SlideContent>
       <SubHeaderBlock>What is Web3?</SubHeaderBlock>
-      <TextBlock>Web3 is the next generation of the internet based on decentralization, user ownership, and blockchain technology.</TextBlock>
+      <TextBlock>Web3 is the next generation of the internet. It&apos;s based on decentralization, user ownership, and blockchain technology.</TextBlock>
       <ImageBlock image={web3start}></ImageBlock>
-      <TextBlock>In understand Web3 further, let take a look at each previous evolution of the internet</TextBlock>
+      <TextBlock>To understand Web3 further, let take a look at each previous evolution of the internet</TextBlock>
     </SlideContent>
   );
 
@@ -124,7 +124,7 @@ const ContentSlides = () => {
   slides.addSlide(
     <SlideContent>
       <SubHeaderBlock>How to get started</SubHeaderBlock>
-      <TextBlock>Throughout this course, we’ll help to start learning Web3 and use Web3 to acceleate you career.</TextBlock>
+      <TextBlock>Throughout this course, we’ll help you to start learning Web3 and using Web3 to acceleate you career.</TextBlock>
     </SlideContent>
   );
 
