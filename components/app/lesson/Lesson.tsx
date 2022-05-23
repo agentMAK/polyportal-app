@@ -8,7 +8,7 @@ const Lesson = (props: any) => {
 
   const { data: session } = useSession()
 
-  mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL_PROJECT_ID}`, {debug: true});
+  mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL_PROJECT_ID}`, {debug: false});
   if(session) {
     mixpanel.identify(`${session.id}`);
   }
@@ -21,7 +21,6 @@ const Lesson = (props: any) => {
 
   const nextSlide = () => {
     setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide < props.slides.getTotalSlides() +1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()+1);
-    console.log(currentSlide)
     if(currentSlide == props.slides.getTotalSlides()) {
       mixpanel.track('End Lesson', {"Lesson": "Introduction to Web3", "Course":"Web3 Development"});
     }
