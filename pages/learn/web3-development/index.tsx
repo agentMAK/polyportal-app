@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Meta from "../../../components/header/meta";
-import { useSession } from "next-auth/react";
 
 import Image from "next/image";
 import web3 from "../../../public/images/cards/web3card.png";
@@ -49,14 +48,14 @@ const LessonCard = (props: any) => {
               /></a></Link>
               </div>
               <div className="w-full">
-                {/* <Link href={props.link}> */}
-                  <a  onClick={() => props.setShowModal(true)} className="text-xl font-sans-semibold text-primary-900 hover:text-primary-500">
+                <Link href={props.link}>
+                  <a className="text-xl font-sans-semibold text-primary-900 hover:text-primary-500">
                     {props.children}
                   </a>
-                {/* </Link> */}
+                </Link>
               </div>
               <div className="w-1/6 md:block hidden">
-                <Button size="s" onClick={() => props.setShowModal(true)}>
+                <Button size="s">
                   Start
                 </Button>
               </div>
@@ -81,8 +80,7 @@ const Index: NextPage = () => {
 
   return (
     <div>
-      <Meta title="PolyPortal - A Beginner Guide to Web3"></Meta>
-
+      <Meta title="PolyPortal - Become a Web3 Developer on Polygon"></Meta>
       <div className="w-full pt-20 pb-44 sm:py-20 bg-primary-500">
         <div className="lg:max-w-screen-lg max-w-xs sm:max-w-screen-sm md:max-w-screen-md mx-auto h-[590px] md:h-[540px] lg:h-fit">
           <div className="flex flex-row flex-wrap h-80 w-full justify-center lg:justify-between items-center gap-y-10">
@@ -122,7 +120,7 @@ const Index: NextPage = () => {
             Getting Started
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard link='/learn/web3-development' setShowModal={setShowModal}>Introduction to Web3</LessonCard>
+            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3' setShowModal={setShowModal}>Introduction to Web3</LessonCard>
               <SubLesson>What is Web3?</SubLesson>
               <SubLesson>Growth of Web3</SubLesson>
               <SubLesson>Job demand in Web3</SubLesson>
