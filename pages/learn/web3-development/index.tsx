@@ -48,14 +48,14 @@ const LessonCard = (props: any) => {
               /></a></Link>
               </div>
               <div className="w-full">
-                <Link href={props.link}>
+                <Link href={props.link} passHref>
                   <a className="text-xl font-sans-semibold text-primary-900 hover:text-primary-500">
                     {props.children}
                   </a>
                 </Link>
               </div>
               <div className="w-1/6 md:block hidden">
-                <Button size="s">
+              <Button size="s" link={props.link}>
                   Start
                 </Button>
               </div>
