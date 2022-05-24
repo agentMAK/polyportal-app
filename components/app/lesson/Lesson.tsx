@@ -40,7 +40,7 @@ const Lesson = (props: any) => {
       <div className='flex flex-row justify-center content-end h-20 w-full border-b-4 fixed top-0 bg-white z-50'>
         <ProgressBar nextSlide={nextSlide} previousSlide={previousSlide} percentageDone={percentageDone}></ProgressBar>
       </div>
-      <div className="max-w-md mx-auto mt-10">
+      <div className="max-w-xs sm:max-w-sm md:max-w-md mx-auto mt-10">
         <DisplaySlides slides={props.slides} redirect={props.redirect} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></DisplaySlides>
       </div> 
     </div>
