@@ -161,7 +161,7 @@ const Index: NextPage = () => {
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-6 justify-center items-center mt-32">
             <Button
               variant="dark"
-              onClick={() => setShowModal(true)}
+              link="/learn/web3-development/lesson/introduction-to-web3"
             >
               Start Course
             </Button>
