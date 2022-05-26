@@ -19,7 +19,7 @@ const ProgressBar = (props:any) => {
             </div>
         </div>
 
-        <button className="my-auto w-6 h-6">
+        <button className="my-auto w-6 h-6" onClick={props.nextSlide}>
         <Image
             src={rightArrow}
             height={24}

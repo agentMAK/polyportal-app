@@ -1,63 +1,40 @@
-import React from "react";
-import Button from "../../main/Button";
+import React, { createRef } from "react";
 
-// eslint-disable-next-line react/display-name
-const Slide = React.forwardRef((props: any, ref: any) => {
+class Slide {
+  slidesArray: Array<any>
+  refs:React.RefObject<any>
 
-  let button:any = <div className="w-full flex justify-end">
-      {" "}
-      <Button
-        size="m"
-        variant="dark"
-        onClick={() => {
-          props.nextSlide();
-        }}
-      >
-        Continue
-      </Button>{" "}
-    </div>
-  
-  if(props.isStart) {
-    button = <div className="w-full flex justify-center">
-    {" "}
-    <Button
-      size="m"
-      variant="dark"
-      onClick={() => {
-        props.nextSlide();
-      }}
-    >
-      Start Lesson
-    </Button>{" "}
-  </div>
+  constructor() {
+    this.slidesArray = []
+    this.refs = createRef();
+  }
+ 
+  addCard(slide:JSX.Element) {
+    this.slidesArray.push({
+      key: this.slidesArray.length,
+      value: {
+        content: slide,
+        ref: createRef(),
+      },
+    });
   }
 
-  if(props.isEnd) {
-    button = <div className="w-full flex justify-center">
-    {" "}
-    <Button
-      size="m"
-      variant="dark"
-      link={props.redirect}
-    >
-      End Lesson
-    </Button>
-  </div>
+  getCards() {
+    return this.slidesArray
   }
 
-  return (
-    <div className="w-full min-h-[700px]" ref={ref}>
-      {props.children}
-      {button}
-      <br />
-      <br />
-    </div>
-  );
-});
+  getCard(index:number){
+    return this.slidesArray[index].value.content
+  }
 
-export default Slide;
+  getRef(index:number) {
+    return this.slidesArray[index].value.ref
+  }
 
-Slide.defaultProps = {
-  isStart:false,
-  isEnd:false,
+  getTotalCards() {
+    return this.slidesArray.length
+  }
 }
+
+
+export default Slide
