@@ -56,7 +56,7 @@ const Index: NextPage = () => {
             Getting Started
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3' setShowModal={setShowModal}>Introduction to Web3</LessonCard>
+            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' setShowModal={setShowModal}>Introduction to Web3</LessonCard>
               <SubLesson>What is Web3?</SubLesson>
               <SubLesson>Growth of Web3</SubLesson>
               <SubLesson>Job demand in Web3</SubLesson>

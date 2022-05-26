@@ -50,8 +50,6 @@ const DisplaySlides = (props: any) => {
       
      }
     }
-
-  console.log(slides)
    
    return (
     <div>
