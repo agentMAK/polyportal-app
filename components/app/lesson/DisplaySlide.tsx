@@ -20,20 +20,12 @@ const Slide = React.forwardRef((props: any, ref: any) => {
   );
 
   if (props.isStart) {
-    button = (
-      <div className="w-full flex justify-center">
-        {" "}
-        <Button
-          size="m"
-          variant="dark"
-          onClick={() => {
-            props.nextSlide();
-          }}
-        >
-          Start Lesson
-        </Button>{" "}
-      </div>
-    );
+    return <SlideIntro ref={ref}>
+            {props.children}
+            {props.displayButton ? button : null}
+            <br />
+            <br />
+          </SlideIntro>
   }
 
   if (props.isEnd) {
@@ -81,6 +73,17 @@ const SlideScreenBlock = styled.div`
   width: 100%;
   padding-top: 20px;
   height: calc(100vh - 80px);
+
+`;
+
+const SlideIntro = styled.div`
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+  height: calc(100vh - 80px);
+
 `;
 
 const SlideBlock = styled.div`

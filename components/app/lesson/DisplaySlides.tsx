@@ -29,9 +29,14 @@ const DisplaySlides = (props: any) => {
     return index === currentCard
   }
 
-  let slides = []
+  let slides = [{key:0, value:<Slide isStart={true} isCurrent={isCurrent(0)} displayButton={isCurrent(0)} nextSlide={nextCard} ref={(el:any) => props.slide.getRef(0).current = el} > {props.slide.getCard(0)} </Slide>}]
 
-  for (let i =  0; i < currentCard+1 ; i++) {
+  if(props.slide.getTotalCards() === 1) {
+    let lastCard = props.slide.getTotalCards()-1
+    slides = [{key:lastCard, value:<Slide isStart={true} isCurrent={true} nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>}]
+  }
+
+  for (let i =  1; i < currentCard+1 ; i++) {
     let lastCard = props.slide.getTotalCards()-1
 
     if(i < lastCard) {

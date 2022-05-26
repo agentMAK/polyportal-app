@@ -17,7 +17,7 @@ import Slides from "../../app/slides/Slides";
 
 const ContentSlides = () => {
   
-  let slides = new Slides(3)
+  let slides = new Slides(4)
 
   slides.getSlide(0).addCard(
     <SlideContent>
@@ -33,16 +33,15 @@ const ContentSlides = () => {
     </SlideContent>
   );
 
-  slides.getSlide(0).addCard(
+  slides.getSlide(1).addCard(
     <SlideContent>
-      <SubHeaderBlock>What is Web3?</SubHeaderBlock>
+      <HeaderBlock>What is Web3?</HeaderBlock>
       <TextBlock>Web3 is the next generation of the internet. It&apos;s based on decentralization, user ownership, and blockchain technology.</TextBlock>
-      <ImageBlock image={web3start}></ImageBlock>
       <TextBlock>To understand Web3 further, let take a look at each previous evolution of the internet</TextBlock>
     </SlideContent>
   );
 
-  slides.getSlide(0).addCard(
+  slides.getSlide(1).addCard(
     <SlideContent>
       <SubHeaderBlock>Web1</SubHeaderBlock>
       <TextBlock>Web1 was the read only internet. It primarily consisted of static websites owned by institution and companies. </TextBlock>
@@ -51,7 +50,7 @@ const ContentSlides = () => {
     </SlideContent>
   );
 
-  slides.getSlide(0).addCard(
+  slides.getSlide(1).addCard(
     <SlideContent>
       <SubHeaderBlock>Web2</SubHeaderBlock>
       <TextBlock>Web2 enabled the ability to both read and write on the internet. This introduces interactive web apps and the evolution of user generated content. Now, anyone in the world could publish content online that could be seen by millions.</TextBlock>
@@ -60,7 +59,7 @@ const ContentSlides = () => {
     </SlideContent>
   );
 
-  slides.getSlide(0).addCard(
+  slides.getSlide(1).addCard(
     <SlideContent>
       <SubHeaderBlock>Problems with Web2</SubHeaderBlock>
       <TextBlock>Web2 application centralise both the storage and distribution of content. As great as these companies are, we’re starting to see unintended consequences of web3 applications.</TextBlock>
@@ -69,7 +68,7 @@ const ContentSlides = () => {
     </SlideContent>
   );
 
-  slides.getSlide(0).addCard(
+  slides.getSlide(1).addCard(
     <SlideContent>
       <SubHeaderBlock>Introducing Web3</SubHeaderBlock>
       <TextBlock>Web3 is read, write and own. It introduces is the ability to truly own digital asset, natively on the internet. This has never been possible before. Thanks to blockchain technologies, the internet now has digital ownership that doesn’t require users to trust any centralised entity.</TextBlock>
@@ -78,7 +77,7 @@ const ContentSlides = () => {
     </SlideContent>
   );
 
-  slides.getSlide(0).addCard(
+  slides.getSlide(1).addCard(
     <SlideContent>
       <TextBlock>Key features of web3 are:</TextBlock>
       <SubHeaderBlock>Decentralisation</SubHeaderBlock>
@@ -87,16 +86,21 @@ const ContentSlides = () => {
     </SlideContent>
   );
 
-  slides.getSlide(0).addCard(
+  slides.getSlide(2).addCard(
     <SlideContent>
-      <SubHeaderBlock>Opportunities in Web3</SubHeaderBlock>
-      <TextBlock>Web3 is an ever-growing part of the internet. Google Trends data shows searches for Web3 has grown massively in the past few years</TextBlock>
-      <ImageBlock image={web3search}></ImageBlock>
+      <HeaderBlock>Opportunities in Web3</HeaderBlock>
       <TextBlock>Let take a look at opportunities in Web3 and demand for Web3 talent.</TextBlock>
     </SlideContent>
   );
 
-  slides.getSlide(1).addCard(
+  slides.getSlide(2).addCard(
+    <SlideContent>
+      <ImageBlock image={web3search}></ImageBlock>
+      <TextBlock>Web3 is an ever-growing part of the internet. Google Trends data shows searches for Web3 has grown massively in the past few years</TextBlock>
+    </SlideContent>
+  );
+
+  slides.getSlide(2).addCard(
     <SlideContent>
       <TextBlock>The number for use cases has expanded significantly as well as gaining mainstream attention.</TextBlock>
       <SubHeaderBlock>NFTs</SubHeaderBlock>
@@ -106,14 +110,14 @@ const ContentSlides = () => {
     </SlideContent>
   );
 
-  slides.getSlide(1).addCard(
+  slides.getSlide(2).addCard(
     <SlideContent>
       <TextBlock>In conjunction with the growth of web3, there has been massive growth in demand for Web3 developers. </TextBlock>
       <ImageBlock image={web3developers}></ImageBlock>
     </SlideContent>
   );
 
-  slides.getSlide(1).addCard(
+  slides.getSlide(2).addCard(
     <SlideContent>
       <TextBlock>Typical salaries for blockchain developer vary based on location and experience. These are average salaries of blockchain developers</TextBlock>
       <ImageBlock image={web3salaries}></ImageBlock>
@@ -121,14 +125,14 @@ const ContentSlides = () => {
     </SlideContent>
   );
 
-  slides.getSlide(2).addCard(
+  slides.getSlide(3).addCard(
     <SlideContent>
-      <SubHeaderBlock>How to get started</SubHeaderBlock>
+      <HeaderBlock>How to get started</HeaderBlock>
       <TextBlock>Throughout this course, we’ll help you to start learning Web3 and using Web3 to acceleate you career.</TextBlock>
     </SlideContent>
   );
 
-  slides.getSlide(2).addCard(
+  slides.getSlide(3).addCard(
     <SlideContent>
       <SubHeaderBlock>Getting Started Section</SubHeaderBlock>
       <TextBlock>In this section, you’ll learn: 
@@ -141,7 +145,7 @@ const ContentSlides = () => {
     </SlideContent>
   );
 
-  slides.getSlide(2).addCard(
+  slides.getSlide(3).addCard(
     <SlideContent>
       <SubHeaderBlock>Start Building Section</SubHeaderBlock>
       <TextBlock>In this section, we’ll work on your first project. We will
@@ -156,7 +160,7 @@ const ContentSlides = () => {
 
 
 
-  slides.getSlide(2).addCard(
+  slides.getSlide(3).addCard(
     <SlideContent>
       <SubHeaderBlock>Great stuff 😃</SubHeaderBlock>
       <TextBlock>You’ve completed this lesson.</TextBlock>
