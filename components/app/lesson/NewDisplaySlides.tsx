@@ -35,12 +35,12 @@ const DisplaySlides = (props: any) => {
     let lastCard = props.slide.getTotalCards()-1
 
     if(i < lastCard) {
-      slides.push({key:i, value:<Slide displayButton={isCurrent(i)} nextSlide={nextCard} ref={(el:any) => props.slide.getRef(i).current = el} > {props.slide.getCard(i)} </Slide>})
+      slides.push({key:i, value:<Slide isCurrent={isCurrent(i)} displayButton={isCurrent(i)} nextSlide={nextCard} ref={(el:any) => props.slide.getRef(i).current = el} > {props.slide.getCard(i)} </Slide>})
      } else if (i === lastCard){
        if(props.totalSlides-1 != props.currentSlide) {
-        slides.push({key:lastCard, value:<Slide nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>})
+        slides.push({key:lastCard, value:<Slide isCurrent={true} nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>})
        } else {
-        slides.push({key:lastCard, value:<Slide isEnd={true} redirect={props.redirect} nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>})
+        slides.push({key:lastCard, value:<Slide isEnd={true} isCurrent={true} redirect={props.redirect} nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>})
        }
       
      }
