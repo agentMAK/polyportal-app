@@ -1,8 +1,7 @@
-import DisplaySlides from "./DisplaySlides";
 import { useEffect, useState } from "react";
 import ProgressBar from "../ProgressBar";
 import mixpanel from 'mixpanel-browser';
-import { getSession, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import NewDisplaySlides from "./NewDisplaySlides";
 import styled from "@emotion/styled";
 

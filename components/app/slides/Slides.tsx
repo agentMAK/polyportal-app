@@ -1,4 +1,4 @@
-import Cards from "./Cards";
+import Slide from "./Slide";
 
 class Slides {
   slidesArray: Array<any>
@@ -8,12 +8,12 @@ class Slides {
     for (let i =  0; i < totalSlides ; i++) {
       this.slidesArray.push({
         key: this.slidesArray.length,
-        value: new Cards(),
+        value: new Slide(),
       });
     }
   } 
 
-  getSlide(index:any) : Cards {
+  getSlide(index:any) : Slide {
     return this.slidesArray[index].value
   }
 

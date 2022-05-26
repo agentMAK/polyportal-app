@@ -5,74 +5,10 @@ import Image from "next/image";
 import web3 from "../../../public/images/cards/web3card.png";
 import Button from "../../../components/main/Button";
 import Footer from "../../../components/main/Footer";
-import dropdown from "../../../public/images/icons/dropdown.svg"
-import dropdownDisabled from "../../../public/images/icons/dropdownDisabled.svg"
-import Link from "next/link";
 import Modal from "../../../components/main/modal/Modal";
 import { useState } from "react";
-
-const LessonCard = (props: any) => {
-
-  if(props.link == undefined) return (
-    <div className="flex md:flex-row flex-col text-center md:text-left w-full items-center justify-center border-b-gray-300 border-b last:border-0 py-5">
-              <div className="flex-row justify-center w-20 md:flex hidden"><Link href="" passHref><a>
-              <Image
-                alt="..."
-                src={dropdownDisabled}
-                width={40}
-                height={40}
-                layout="fixed"
-              /></a></Link>
-              </div>
-              <div className="w-full">
-                  <a className="text-xl font-sans-semibold text-primary-900">
-                    {props.children} 
-                  </a>
-              </div>
-              <div className="w-1/6 md:block hidden">
-              </div>
-            </div>
-
-  )
-
-
-  return (
-    <div className="flex md:flex-row flex-col text-center md:text-left w-full items-center justify-center border-b-gray-300 border-b last:border-0 py-5">
-              <div className="flex-row justify-center w-20 md:flex hidden"><Link href="" passHref><a>
-              <Image
-                alt="..."
-                src={dropdown}
-                width={40}
-                height={40}
-                layout="fixed"
-              /></a></Link>
-              </div>
-              <div className="w-full">
-                <Link href={props.link} passHref>
-                  <a className="text-xl font-sans-semibold text-primary-900 hover:text-primary-500">
-                    {props.children}
-                  </a>
-                </Link>
-              </div>
-              <div className="w-1/6 md:block hidden">
-              <Button size="s" link={props.link}>
-                  Start
-                </Button>
-              </div>
-            </div>
-  );
-};
-
-
-const SubLesson = (props: any) => { 
-    return (
-      <div className="py-2 w-full border-b-gray-200 border-b md:text-left text-center ">
-              <p className="md:ml-[63px]">{props.children}</p>
-            </div>
-    )
-}
-
-
+import LessonCard from "../../../components/main/LessonCard";
+import SubLesson from "../../../components/main/SubLesson";
 
 const Index: NextPage = () => {
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Slide from "../slides/Slide";
+import Slide from "./DisplaySlide";
 
 const DisplaySlides = (props: any) => {
 
@@ -35,9 +35,8 @@ const DisplaySlides = (props: any) => {
     let lastCard = props.slide.getTotalCards()-1
 
     if(i < lastCard) {
-      slides.push({key:i+1, value:<Slide displayButton={isCurrent(i)} nextSlide={nextCard} ref={(el:any) => props.slide.getRef(i).current = el} > {props.slide.getCard(i)} </Slide>})
+      slides.push({key:i, value:<Slide displayButton={isCurrent(i)} nextSlide={nextCard} ref={(el:any) => props.slide.getRef(i).current = el} > {props.slide.getCard(i)} </Slide>})
      } else if (i === lastCard){
-       console.log("--")
        if(props.totalSlides-1 != props.currentSlide) {
         slides.push({key:lastCard, value:<Slide nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>})
        } else {
@@ -47,7 +46,7 @@ const DisplaySlides = (props: any) => {
      }
     }
 
-   
+  console.log(slides)
    
    return (
     <div>
