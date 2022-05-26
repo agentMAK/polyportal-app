@@ -31,10 +31,6 @@ const Lesson = (props: any) => {
     setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide > 0 ? prevCurrentSlide - 1: 0);
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  },[currentSlide]);
-
   let percentageDone = (currentSlide+1)/(props.slides.getTotalSlides())*100
 
   return (
