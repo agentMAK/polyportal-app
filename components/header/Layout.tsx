@@ -39,7 +39,7 @@ const Layout = ({ children }: any) => {
         children
       ) : (
         <div className="w-full bg-primary-100">
-          <div>{children}</div>
+          <div className="pt-20">{children}</div>
         </div>
       )}
     </div>

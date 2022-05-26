@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import ProgressBar from "../ProgressBar";
 import mixpanel from 'mixpanel-browser';
 import { useSession } from "next-auth/react";
-import NewDisplaySlides from "./NewDisplaySlides";
+import DisplaySlides from "./DisplaySlides";
 import styled from "@emotion/styled";
+import { useRouter } from 'next/router'
 
 const Lesson = (props: any) => {
+  const router = useRouter()
 
   const { data: session } = useSession()
 
@@ -18,20 +20,33 @@ const Lesson = (props: any) => {
     mixpanel.track('Start Lesson', {"Lesson": "Introduction to Web3", "Course":"Web3 Development"});
   },[]);
 
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
-
   const nextSlide = () => {
-    setCurrentSlide((prevCurrentSlide:number) => prevCurrentSlide < props.slides.getTotalSlides()-1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()-1);
-    if(currentSlide == props.slides.getTotalSlides()) {
+    // props.setCurrentSlide((prevCurrentSlide:number) => prevCurrentSlide < props.slides.getTotalSlides()-1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()-1);
+
+    props.currentSlide < props.slides.getTotalSlides()-1 ? router.push({
+      pathname: '[pid]',
+      query: { pid: parseInt(props.currentSlide) +1 },
+    }, undefined, { shallow: true }) : router.push({
+      pathname: '[pid]',
+      query: { pid: props.slides.getTotalSlides()-1 },
+    }, undefined, { shallow: true });
+
+    if(props.currentSlide == props.slides.getTotalSlides()) {
       mixpanel.track('End Lesson', {"Lesson": "Introduction to Web3", "Course":"Web3 Development"});
     }
   };
 
   const previousSlide = () => {
-    setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide > 0 ? prevCurrentSlide - 1: 0);
+    props.currentSlide > 0 ? router.push({
+      pathname: '[pid]',
+      query: { pid: parseInt(props.currentSlide) -1 },
+    }, undefined, { shallow: true }): router.push({
+      pathname: '[pid]',
+      query: { pid: 0 },
+    }, undefined, { shallow: true });
   };
 
-  let percentageDone = (currentSlide+1)/(props.slides.getTotalSlides())*100
+  let percentageDone = (parseInt(props.currentSlide) +1)/(props.slides.getTotalSlides())*100
 
   return (
     <div>
@@ -39,10 +54,9 @@ const Lesson = (props: any) => {
         <ProgressBar nextSlide={nextSlide} previousSlide={previousSlide} percentageDone={percentageDone}></ProgressBar>
       </div>
       <AppContent>
-        <div className="max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-          {/* <DisplaySlides slides={props.slides} redirect={props.redirect} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></DisplaySlides> */}
-          <NewDisplaySlides slide={props.slides.getSlide(currentSlide)} totalSlides={props.slides.getTotalSlides()} nextSlide={nextSlide} currentSlide={currentSlide} redirect={props.redirect}></NewDisplaySlides>
-        </div> 
+        <div className="max-w-xs sm:max-w-sm md:max-w-lg mx-auto">
+          <DisplaySlides slide={props.slides.getSlide(props.currentSlide)} totalSlides={props.slides.getTotalSlides()} nextSlide={nextSlide} currentSlide={props.currentSlide} redirect={props.redirect}></DisplaySlides>
+        </div>
       </AppContent>
     </div>
   );
