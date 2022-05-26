@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import ProgressBar from "../ProgressBar";
 import mixpanel from 'mixpanel-browser';
 import { getSession, useSession } from "next-auth/react";
+import NewDisplaySlides from "./NewDisplaySlides";
+import styled from "@emotion/styled";
 
 const Lesson = (props: any) => {
 
@@ -17,10 +19,10 @@ const Lesson = (props: any) => {
     mixpanel.track('Start Lesson', {"Lesson": "Introduction to Web3", "Course":"Web3 Development"});
   },[]);
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   const nextSlide = () => {
-    setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide < props.slides.getTotalSlides() +1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()+1);
+    setCurrentSlide((prevCurrentSlide:number) => prevCurrentSlide < props.slides.getTotalSlides()-1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()-1);
     if(currentSlide == props.slides.getTotalSlides()) {
       mixpanel.track('End Lesson', {"Lesson": "Introduction to Web3", "Course":"Web3 Development"});
     }
@@ -29,22 +31,35 @@ const Lesson = (props: any) => {
   const previousSlide = () => {
     setCurrentSlide((prevCurrentSlide:any) => prevCurrentSlide > 0 ? prevCurrentSlide - 1: 0);
   };
+
   useEffect(() => {
     window.scrollTo(0, 0)
   },[currentSlide]);
 
-  let percentageDone = currentSlide/(props.slides.getTotalSlides()+1)*100
+  let percentageDone = (currentSlide+1)/(props.slides.getTotalSlides())*100
 
   return (
-    <div className="bg-primary-100">
+    <div>
       <div className='flex flex-row justify-center content-end h-20 w-full border-b-4 fixed top-0 bg-white z-50'>
         <ProgressBar nextSlide={nextSlide} previousSlide={previousSlide} percentageDone={percentageDone}></ProgressBar>
       </div>
-      <div className="max-w-xs sm:max-w-sm md:max-w-md mx-auto mt-10">
-        <DisplaySlides slides={props.slides} redirect={props.redirect} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></DisplaySlides>
-      </div> 
+      <AppContent>
+        <div className="max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+          {/* <DisplaySlides slides={props.slides} redirect={props.redirect} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></DisplaySlides> */}
+          <NewDisplaySlides slide={props.slides.getSlide(currentSlide)} totalSlides={props.slides.getTotalSlides()} nextSlide={nextSlide} currentSlide={currentSlide} redirect={props.redirect}></NewDisplaySlides>
+        </div> 
+      </AppContent>
     </div>
   );
 };
 
 export default Lesson;
+
+const AppContent = styled.div`
+  position:fixed;
+  top:80px;
+  width: 100%;
+  height: calc(100% - 80px);
+  overflow-y:scroll;
+  background-color:#F9F8FF
+`

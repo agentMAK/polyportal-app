@@ -46,9 +46,9 @@ const Slide = React.forwardRef((props: any, ref: any) => {
   }
 
   return (
-    <div className="w-full min-h-[700px]" ref={ref}>
+    <div className="w-full pt-5" ref={ref}>
       {props.children}
-      {button}
+      {props.displayButton ? button : null}
       <br />
       <br />
     </div>
@@ -60,4 +60,5 @@ export default Slide;
 Slide.defaultProps = {
   isStart:false,
   isEnd:false,
+  displayButton:true,
 }
