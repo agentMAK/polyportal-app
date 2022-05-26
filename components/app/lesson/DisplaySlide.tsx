@@ -80,7 +80,7 @@ Slide.defaultProps = {
 const SlideScreenBlock = styled.div`
   width: 100%;
   padding-top: 20px;
-  height: calc(100vh - 20px);
+  height: calc(100vh - 80px);
 `;
 
 const SlideBlock = styled.div`

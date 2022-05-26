@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ProgressBar from "../ProgressBar";
 import mixpanel from 'mixpanel-browser';
 import { useSession } from "next-auth/react";
-import NewDisplaySlides from "./NewDisplaySlides";
+import DisplaySlides from "./DisplaySlides";
 import styled from "@emotion/styled";
 
 const Lesson = (props: any) => {
@@ -39,10 +39,9 @@ const Lesson = (props: any) => {
         <ProgressBar nextSlide={nextSlide} previousSlide={previousSlide} percentageDone={percentageDone}></ProgressBar>
       </div>
       <AppContent>
-        <div className="max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-          {/* <DisplaySlides slides={props.slides} redirect={props.redirect} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} nextSlide={nextSlide}></DisplaySlides> */}
-          <NewDisplaySlides slide={props.slides.getSlide(currentSlide)} totalSlides={props.slides.getTotalSlides()} nextSlide={nextSlide} currentSlide={currentSlide} redirect={props.redirect}></NewDisplaySlides>
-        </div> 
+        <div className="max-w-xs sm:max-w-sm md:max-w-lg mx-auto">
+          <DisplaySlides slide={props.slides.getSlide(currentSlide)} totalSlides={props.slides.getTotalSlides()} nextSlide={nextSlide} currentSlide={currentSlide} redirect={props.redirect}></DisplaySlides>
+        </div>
       </AppContent>
     </div>
   );
