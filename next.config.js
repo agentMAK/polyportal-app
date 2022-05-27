@@ -4,6 +4,14 @@ const nextConfig = {
   images: {
     domains: ['cdn.discordapp.com'],
   },
+  rewrites: async () => {
+    return [
+      {
+        source: "/privacy-policy",
+        destination: "/privacy-policy/index.html",
+      }
+    ]
+  },
   async redirects() {
     return [
       {

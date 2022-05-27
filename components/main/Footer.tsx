@@ -14,9 +14,6 @@ const Footer = (props:any) => {
       </a>
     </div>
   <div className="flex w-fit h-full">
-    <p className="text-sm my-auto mr-3">
-      Made with ❤️ &nbsp;in London
-    </p>
     <div className="hidden md:block">
       <a className="mr-3" href="https://twitter.com/PolyPortalHQ">
         <Image src={twitter} alt="Twitter" height={20} width={20} />
@@ -25,11 +22,14 @@ const Footer = (props:any) => {
       <Image src={discord} alt="Discord" height={20} width={20} />
       </a>
     </div>
+    <p className="text-sm my-auto ml-3">
+       Built with <a className="hover:underline" href="https://finity.polygon.technology/">Finity</a>
+    </p>
   </div>
   <div className="w-fit bg-blue">
     <p className="text-sm my-auto mr-3">
-      <Link href="/"><a>Terms and Conditions</a></Link> &nbsp; &nbsp; &nbsp;{" "}
-      <a href="/privacy-policy"  target="_blank" rel="noopener noreferrer" >Privacy Policy</a>{" "}
+      <Link href="/"><a className="hover:underline">Terms and Conditions</a></Link> &nbsp; &nbsp; &nbsp;{" "}
+      <a className="hover:underline" href="/privacy-policy"  target="_blank" rel="noopener noreferrer" >Privacy Policy</a>{" "}
     </p>
   </div>
 </div>
