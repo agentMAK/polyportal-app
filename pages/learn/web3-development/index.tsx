@@ -56,13 +56,12 @@ const Index: NextPage = () => {
             Getting Started
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' setShowModal={setShowModal}>Introduction to Web3</LessonCard>
-              <SubLesson>What is Web3?</SubLesson>
-              <SubLesson>Growth of Web3</SubLesson>
-              <SubLesson>Job demand in Web3</SubLesson>
+            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' setShowModal={setShowModal} emoji="▶️">Introduction to Web3</LessonCard>
+              <SubLesson >What is Web3?</SubLesson>
+              <SubLesson>Opportunities in Web3</SubLesson>
               <SubLesson>How to get started</SubLesson>
-            <LessonCard>Polygon Ecosystem</LessonCard>
-            <LessonCard>Skills you must know</LessonCard>
+            <LessonCard emoji="💜">Polygon</LessonCard>
+            <LessonCard emoji="🥷">Skills you must know</LessonCard>
           </div>
         </div>
 
@@ -71,10 +70,10 @@ const Index: NextPage = () => {
             Setup Development
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard>The Web3 Developer Stack</LessonCard>
-            <LessonCard>Deploy a smart contract using REMIX</LessonCard>
-            <LessonCard>Deploy a smart contract using Hardhat</LessonCard>
-            <LessonCard>Using Web3.js to interact with Web3</LessonCard>
+            <LessonCard emoji="📚">The Web3 Developer Stack</LessonCard>
+            <LessonCard emoji="🧪">Deploy a smart contract using REMIX</LessonCard>
+            <LessonCard emoji="⚒️">Deploy a smart contract using Hardhat</LessonCard>
+            <LessonCard emoji="🎿">Using Web3.js to interact with Web3</LessonCard>
           </div>
         </div>
 
@@ -83,9 +82,9 @@ const Index: NextPage = () => {
             Start Building
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard>How to create a NFT on Polygon</LessonCard>
-            <LessonCard>How to create your own token on Polygon</LessonCard>
-            <LessonCard>How to build a play-to-earn game on Polygon</LessonCard>
+            <LessonCard emoji='🎨'>How to create a NFT on Polygon</LessonCard>
+            <LessonCard emoji="🟣">How to create your own token on Polygon</LessonCard>
+            <LessonCard emoji="🕹️">How to build a play-to-earn game on Polygon</LessonCard>
           </div>
         </div>
 

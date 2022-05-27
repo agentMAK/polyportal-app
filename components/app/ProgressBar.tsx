@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const ProgressBar = (props:any) => {
 
-    return <div className="flex flex-row w-fit gap-x-3">
+    return <div className="flex flex-row w-fit gap-x-3 justify-self-center">
         <button className="my-auto w-6 h-6" onClick={props.previousSlide}>
         <Image
             src={leftArrow}

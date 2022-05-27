@@ -5,6 +5,9 @@ import { useSession } from "next-auth/react";
 import DisplaySlides from "./DisplaySlides";
 import styled from "@emotion/styled";
 import { useRouter } from 'next/router'
+import cross from "../../../public/images/icons/cross.svg";
+import Image from 'next/image'
+import Link from "next/link";
 
 const Lesson = (props: any) => {
   const router = useRouter()
@@ -46,15 +49,22 @@ const Lesson = (props: any) => {
     }, undefined, { shallow: true });
   };
 
-  let percentageDone = (parseInt(props.currentSlide) +1)/(props.slides.getTotalSlides())*100
+  let percentageDone = (parseInt(props.currentSlide))/(props.slides.getTotalSlides()-1)*100
 
   return (
     <div>
-      <div className='flex flex-row justify-center content-end h-20 w-full border-b-4 fixed top-0 bg-white z-50'>
+      <div className='grid grid-cols-3 h-20 w-full fixed top-0 bg-white z-50 drop-shadow-[0_0_15px_rgb(0,0,0,0.1)]'>
+      <Link href={props.redirect} passHref><button className="my-auto w-7 h-8 ml-7">
+        <Image
+            src={cross}
+            height={32}
+            width={32}
+            alt=""
+        /></button></Link>
         <ProgressBar nextSlide={nextSlide} previousSlide={previousSlide} percentageDone={percentageDone}></ProgressBar>
       </div>
       <AppContent>
-        <div className="max-w-xs sm:max-w-sm md:max-w-lg mx-auto">
+        <div className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto">
           <DisplaySlides slide={props.slides.getSlide(props.currentSlide)} totalSlides={props.slides.getTotalSlides()} nextSlide={nextSlide} currentSlide={props.currentSlide} redirect={props.redirect}></DisplaySlides>
         </div>
       </AppContent>
@@ -70,5 +80,5 @@ const AppContent = styled.div`
   width: 100%;
   height: calc(100% - 80px);
   overflow-y:scroll;
-  background-color:#F9F8FF
+  background-color:#FDFDFF
 `
