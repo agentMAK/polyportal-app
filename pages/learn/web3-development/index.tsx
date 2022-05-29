@@ -56,7 +56,7 @@ const Index: NextPage = () => {
             Getting Started
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' setShowModal={setShowModal} emoji="▶️">Introduction to Web3</LessonCard>
+            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' setShowModal={setShowModal} emoji="🎓">Introduction to Web3</LessonCard>
               <SubLesson >What is Web3?</SubLesson>
               <SubLesson>Opportunities in Web3</SubLesson>
               <SubLesson>How to get started</SubLesson>
@@ -69,7 +69,7 @@ const Index: NextPage = () => {
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
             <LessonCard emoji='🎨'>How to build and deploy a NFT on Polygon</LessonCard>
-            <LessonCard emoji="🟣">How to create your own token on Polygon</LessonCard>
+            <LessonCard emoji="😊">How to create your own token on Polygon</LessonCard>
             <LessonCard emoji="📄">Create your first contract on Polygon</LessonCard>
           </div>
         </div>

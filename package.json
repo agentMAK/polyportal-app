@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.8.1",
     "@popperjs/core": "^2.11.5",
     "@vimeo/player": "^2.16.4",
+    "apple-color-emoji": "^1.0.1",
     "canvas-confetti": "^1.5.1",
     "framer-motion": "^6.3.4",
     "mixpanel": "^0.14.0",
