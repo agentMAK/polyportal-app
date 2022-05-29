@@ -12,8 +12,6 @@ import SubLesson from "../../../components/main/SubLesson";
 
 const Index: NextPage = () => {
 
-  const [showModal, setShowModal] = useState<boolean>(false)
-
   return (
     <div>
       <Meta title="PolyPortal - Become a Web3 Developer on Polygon"></Meta>
@@ -56,11 +54,13 @@ const Index: NextPage = () => {
             Getting Started
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' setShowModal={setShowModal} emoji="🎓">Introduction to Web3</LessonCard>
+            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' emoji="🎓" title="Introduction to Web3" displayLessons={true}>
               <SubLesson >What is Web3?</SubLesson>
               <SubLesson>Opportunities in Web3</SubLesson>
               <SubLesson>How to get started</SubLesson>
+            </LessonCard>
           </div>
+              
         </div>
 
         <div className="mt-24">
@@ -68,9 +68,9 @@ const Index: NextPage = () => {
             Start Building
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard emoji='🎨'>How to build and deploy a NFT on Polygon</LessonCard>
-            <LessonCard emoji="😊">How to create your own token on Polygon</LessonCard>
-            <LessonCard emoji="📄">Create your first contract on Polygon</LessonCard>
+            <LessonCard emoji='🎨' title="How to build and deploy a NFT on Polygon"></LessonCard>
+            <LessonCard emoji="😊" title="How to create your own token on Polygon"></LessonCard>
+            <LessonCard emoji="📄" title="Create your first contract on Polygon"></LessonCard>
           </div>
         </div>
 
@@ -98,7 +98,6 @@ const Index: NextPage = () => {
 
         <Footer />
       </div>
-      {showModal ? <Modal setShowModal={setShowModal}/> : null}
     </div>
   );
 };
