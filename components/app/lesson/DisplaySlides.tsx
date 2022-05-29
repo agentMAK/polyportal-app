@@ -39,7 +39,6 @@ const DisplaySlides = (props: any) => {
       slides = [{key:lastCard, value:<Slide isStart={true} isCurrent={true} nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>}]
       } else {
         slides = [{key:lastCard, value:<Slide isEnd={true} isCurrent={true} redirect={props.redirect} nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>}]
-        console.log("Variant 1")
      }
     }
 
