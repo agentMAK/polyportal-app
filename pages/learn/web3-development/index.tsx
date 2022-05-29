@@ -60,20 +60,6 @@ const Index: NextPage = () => {
               <SubLesson >What is Web3?</SubLesson>
               <SubLesson>Opportunities in Web3</SubLesson>
               <SubLesson>How to get started</SubLesson>
-            <LessonCard emoji="💜">Polygon</LessonCard>
-            <LessonCard emoji="🥷">Skills you must know</LessonCard>
-          </div>
-        </div>
-
-        <div className="mt-24">
-          <p className="text-center font-sans-semibold text-3xl text-primary-700">
-            Setup Development
-          </p>
-          <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard emoji="📚">The Web3 Developer Stack</LessonCard>
-            <LessonCard emoji="🧪">Deploy a smart contract using REMIX</LessonCard>
-            <LessonCard emoji="⚒️">Deploy a smart contract using Hardhat</LessonCard>
-            <LessonCard emoji="🎿">Using Web3.js to interact with Web3</LessonCard>
           </div>
         </div>
 
@@ -82,9 +68,9 @@ const Index: NextPage = () => {
             Start Building
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard emoji='🎨'>How to create a NFT on Polygon</LessonCard>
+            <LessonCard emoji='🎨'>How to build and deploy a NFT on Polygon</LessonCard>
             <LessonCard emoji="🟣">How to create your own token on Polygon</LessonCard>
-            <LessonCard emoji="🕹️">How to build a play-to-earn game on Polygon</LessonCard>
+            <LessonCard emoji="📄">Create your first contract on Polygon</LessonCard>
           </div>
         </div>
 
@@ -96,7 +82,7 @@ const Index: NextPage = () => {
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-6 justify-center items-center mt-32">
             <Button
               variant="dark"
-              link="/learn/web3-development/lesson/introduction-to-web3"
+              link="/learn/web3-development/lesson/introduction-to-web3/1"
             >
               Start Course
             </Button>

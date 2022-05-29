@@ -4,6 +4,7 @@ import Slide from "./DisplaySlide";
 const DisplaySlides = (props: any) => {
 
   const [currentCard, setCurrentCard] = useState<number>(0);
+  const lastCard = props.slide.getTotalCards()-1
   
   useEffect(() => {
     setCurrentCard(0)
@@ -18,7 +19,7 @@ const DisplaySlides = (props: any) => {
 
 
   const nextCard = () => {
-    setCurrentCard((prevCard:number) => prevCard < props.slide.getTotalCards()-1 ? prevCard + 1 : props.slide.getTotalCards()-1)
+    setCurrentCard((prevCard:number) => prevCard < lastCard ? prevCard + 1 : lastCard)
   };
 
   const previousCard = () => {
@@ -31,13 +32,17 @@ const DisplaySlides = (props: any) => {
 
   let slides = [{key:0, value:<Slide isStart={true} isCurrent={isCurrent(0)} displayButton={isCurrent(0)} nextSlide={nextCard} ref={(el:any) => props.slide.getRef(0).current = el} > {props.slide.getCard(0)} </Slide>}]
 
+
   if(props.slide.getTotalCards() === 1) {
-    let lastCard = props.slide.getTotalCards()-1
-    slides = [{key:lastCard, value:<Slide isStart={true} isCurrent={true} nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>}]
-  }
+
+    if(props.totalSlides-1 != props.currentSlide) {
+      slides = [{key:lastCard, value:<Slide isStart={true} isCurrent={true} nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>}]
+      } else {
+        slides = [{key:lastCard, value:<Slide isEnd={true} isCurrent={true} redirect={props.redirect} nextSlide={props.nextSlide} ref={(el:any) => props.slide.getRef(lastCard).current = el} > {props.slide.getCard(lastCard)} </Slide>}]
+     }
+    }
 
   for (let i =  1; i < currentCard+1 ; i++) {
-    let lastCard = props.slide.getTotalCards()-1
 
     if(i < lastCard) {
       slides.push({key:i, value:<Slide isCurrent={isCurrent(i)} displayButton={isCurrent(i)} nextSlide={nextCard} ref={(el:any) => props.slide.getRef(i).current = el} > {props.slide.getCard(i)} </Slide>})

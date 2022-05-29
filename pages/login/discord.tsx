@@ -24,7 +24,7 @@ const Index: NextPage = (props: any) => {
         </button>
       </a>
       
-  const refreshButton = <Link href="/learn" passHref><button className='h-9 bg-primary-500 text-white hover:bg-primary-400 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500bg-white w-full h-9border border-primary-500 text-sm shadow font-sans-medium rounded-md'>
+  const refreshButton = <Link href="/learn/web3-development" passHref><button className='h-9 bg-primary-500 text-white hover:bg-primary-400 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500bg-white w-full h-9border border-primary-500 text-sm shadow font-sans-medium rounded-md'>
     Start Learning
   </button></Link>
   return (

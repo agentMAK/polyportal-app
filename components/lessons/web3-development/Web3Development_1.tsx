@@ -17,7 +17,7 @@ import Slides from "../../app/slides/Slides";
 
 const ContentSlides = () => {
   
-  let slides = new Slides(4)
+  let slides = new Slides(5)
 
   slides.getSlide(0).addCard(
     <SlideContent>
@@ -160,13 +160,10 @@ const ContentSlides = () => {
 
 
 
-  slides.getSlide(3).addCard(
+  slides.getSlide(4).addCard(
     <SlideContent>
-      <SubHeaderBlock>Great stuff 😃</SubHeaderBlock>
-      <TextBlock>You’ve completed this lesson.</TextBlock>
-      <ImageBlock image={yay}></ImageBlock>
-      <TextBlock>Our next lesson will released in a couple of days</TextBlock>
-      <TextBlock>In the meanwhile, follow us on <a href="https://twitter.com/PolyPortalHQ" className="underline">Twitter</a> to get noticed. 🐦</TextBlock>
+      <HeaderBlock>You’ve completed this lesson.</HeaderBlock>
+      <TextBlock>Our next lesson will released in a couple of days. <br />In the meanwhile, follow us on <a href="https://twitter.com/PolyPortalHQ" className="underline">Twitter</a> to get noticed. 🐦</TextBlock>
     </SlideContent>
   );
 
