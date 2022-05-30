@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/images/logo/PolyPortalLogo.svg";
 import { useRouter } from "next/router";
-import { signIn, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import discord from "../../public/images/icons/discordIcon.svg";
 import React from "react";
 import UserDropdown from "./UserDropdown";
@@ -69,7 +69,7 @@ const NavBar = () => {
           </a>
         </Link>
         <div className="sm:flex justify-center gap-x-11 h-fit my-auto pl-[116px] hidden">
-          <Link href="/learn" passHref>
+          {/* <Link href="/learn" passHref>
             <p className="text-xl text-primary-900 font-sans-semibold opacity-25">
               Access
             </p>
@@ -81,16 +81,15 @@ const NavBar = () => {
             <p className="text-xl text-primary-900 font-sans-semibold opacity-25">
               Explore
             </p>
-          </Link>
+          </Link> */}
         </div>
         <div className="flex justify-end w-64">
-        <div className="flex items-center"><a className="font-sans-semibold text-primary-500 hover:underline" href="https://polyportal.notion.site/PolyPortal-Jobs-48b3bb178c064206a8cc1fe3fcd6b2cf" target="_blank" rel="noopener noreferrer">We&apos;re Hiring</a></div>
+        {/* <div className="flex items-center"><a className="font-sans-semibold text-primary-500 hover:underline" href="https://polyportal.notion.site/PolyPortal-Jobs-48b3bb178c064206a8cc1fe3fcd6b2cf" target="_blank" rel="noopener noreferrer">We&apos;re Hiring</a></div> */}
           {session ? (
             session.user ? (
               <div className="ml-4"><UserDropdown image={session.user.image} /></div>
             ) : null
-          ) : null }
-           {/* ) : ( <a href="https://discord.gg/DTeRCGuHKq" target="_blank" rel="noopener noreferrer">
+           ) : ( <a href="https://discord.gg/DTeRCGuHKq" target="_blank" rel="noopener noreferrer">
              <button
               className=" bg-white w-40 sm:w-52 h-9 text-primary-500 border border-primary-500 sm:text-sm text-xs shadow font-sans-medium rounded-md hover:bg-primary-100 focus:drop-shadow-lg disabled:bg-slate-200 disabled:text-slate-500">
               <div className="flex justify-center gap-x-2">
@@ -103,7 +102,7 @@ const NavBar = () => {
                 Join our Discord
               </div>
             </button></a>
-          )} */}
+          )}
         </div>
       </div>
     </div>
