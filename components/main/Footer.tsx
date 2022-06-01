@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import discord from "../../public/images/icons/discordlogo.svg";
 import twitter from "../../public/images/icons/twitterlogo.svg";
 

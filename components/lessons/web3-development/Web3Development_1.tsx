@@ -163,7 +163,7 @@ const ContentSlides = () => {
   slides.getSlide(4).addCard(
     <SlideContent>
       <HeaderBlock>You’ve completed this lesson.</HeaderBlock>
-      <TextBlock>Our next lesson will released in a couple of days. <br />In the meanwhile, follow us on <a href="https://twitter.com/PolyPortalHQ" className="underline">Twitter</a> to get noticed. 🐦</TextBlock>
+      <TextBlock>In the next lesson, you&apos;ll learn how to setup your development environment </TextBlock>
     </SlideContent>
   );
 
