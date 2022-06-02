@@ -59,7 +59,7 @@ const Index: NextPage = () => {
               <SubLesson>Opportunities in Web3</SubLesson>
               <SubLesson>How to get started</SubLesson>
             </LessonCard>
-            <LessonCard link='/learn/web3-development/lesson/setup-environment/0' emoji="👨‍💻" title="Setup your Development Environemnt" displayLessons={true}>
+            <LessonCard link='/learn/web3-development/lesson/setup-environment/0' emoji="👨‍💻" title="Setup your Development Environment" displayLessons={true}>
             </LessonCard>
           </div>
               
