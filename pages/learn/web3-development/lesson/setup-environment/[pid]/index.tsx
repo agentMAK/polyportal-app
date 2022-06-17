@@ -41,23 +41,6 @@ export const getServerSideProps: GetServerSideProps = async (context: any) => {
     };
   }
 
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/check-guild`, {
-    method: "POST",
-    body: JSON.stringify({ accessToken: session.accessToken }),
-    headers: { "Content-type": "application/json; charset=UTF-8" },
-  })
-  const data = await res.json()
-
-  if (data.message == "false") {
-    return {
-      redirect: {
-        destination: "/login/discord",
-        permanent: false,
-      },
-    };
-  }
-  
-
   return {
     props: { session },
   };
