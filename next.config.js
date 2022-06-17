@@ -16,7 +16,12 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/learn',
+        destination: '/learn/web3-development',
+        permanent: true,
+      },
+      {
+        source: '/learn',
+        destination: '/learn/web3-development',
         permanent: true,
       },
     ]
