@@ -2,44 +2,42 @@ import styled from "@emotion/styled";
 import React, { useEffect, useState } from "react";
 import Button from "../../main/Button";
 import ShowConfetti from "../animations/ShowConfetti";
+import CardBlock from "./CardBlock";
+import CardButton from "./CardButton";
 
 // eslint-disable-next-line react/display-name
 const Slide = React.forwardRef((props: any, ref: any) => {
   const [confettiToggle, setConfettiToggle] = useState<boolean>(false);
 
-  let button: any = (
-    <div className="w-full flex justify-end">
-      {" "}
-      <Button
-        size="m"
-        variant="dark"
-        onClick={() => {
-          props.nextSlide();
-        }}
-      >
-        Continue
-      </Button>
-    </div>
-  );
+  let layout = props.config.layout;
+  let button: any = <CardButton onClick={props.nextSlide} />;
+
+  // Auto Configurations
+  if (layout === "auto") {
+    if (props.status === "start") {
+      layout = "screen";
+    } else if (props.status === "end") {
+      layout = "focus";
+    }
+  }
+
+  if (layout === "focus") {
+    button = (
+      <CardButton
+        onClick={props.nextSlide}
+        layout="center"
+        status={props.status}
+        redirect={props.redirect}
+      />
+    );
+  }
 
   return (
-    <>
-      {props.isCurrent ? (
-        <SlideScreenBlock ref={ref}>
-          {props.children}
-          {props.displayButton ? button : null}
-          <br />
-          <br />
-        </SlideScreenBlock>
-      ) : (
-        <SlideBlock ref={ref}>
-          {props.children}
-          {props.displayButton ? button : null}
-          <br />
-          <br />
-        </SlideBlock>
-      )}
-    </>
+    <CardBlock ref={ref} layout={layout} isCurrent={props.isCurrent}>
+      {props.children}
+      {props.isCurrent ? button : null}
+      <br />
+    </CardBlock>
   );
 });
 
@@ -51,24 +49,3 @@ Slide.defaultProps = {
   displayButton: true,
   isCurrent: false,
 };
-
-const SlideScreenBlock = styled.div`
-  width: 100%;
-  padding-top: 20px;
-  height: calc(100vh - 80px);
-`;
-
-const SlideIntro = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding-top: 20px;
-  height: calc(100vh - 80px);
-`;
-
-const SlideBlock = styled.div`
-  width: 100%;
-  padding-top: 20px;
-  height: 100%;
-`;

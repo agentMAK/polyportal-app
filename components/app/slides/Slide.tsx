@@ -8,13 +8,18 @@ class Slide {
     this.slidesArray = []
     this.refs = createRef();
   }
+
+  defaultConfig = {
+    layout: 'auto'
+  }
  
-  addCard(slide:JSX.Element) {
+  addCard(slide:JSX.Element, config:any = this.defaultConfig) {
     this.slidesArray.push({
       key: this.slidesArray.length,
       value: {
         content: slide,
         ref: createRef(),
+        config: config
       },
     });
   }
@@ -33,6 +38,10 @@ class Slide {
 
   getTotalCards() {
     return this.slidesArray.length
+  }
+
+  getConfig(index:number) {
+    return this.slidesArray[index].value.config
   }
 }
 
