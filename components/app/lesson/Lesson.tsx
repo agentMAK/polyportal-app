@@ -22,12 +22,12 @@ const Lesson = (props: any) => {
     mixpanel.identify(`${session.id}`);
   }
 
-  useEffect(() => {
-    mixpanel.track("Start Lesson", {
-      Lesson: "Introduction to Web3",
-      Course: "Web3 Development",
-    });
-  }, []);
+  // useEffect(() => {
+  //   mixpanel.track("Start Lesson", {
+  //     Lesson: "Introduction to Web3",
+  //     Course: "Web3 Development",
+  //   });
+  // }, []);
 
   const nextSlide = () => {
     // props.setCurrentSlide((prevCurrentSlide:number) => prevCurrentSlide < props.slides.getTotalSlides()-1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()-1);

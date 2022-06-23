@@ -20,16 +20,15 @@ const Index: NextPage = () => {
           <div className="flex flex-row flex-wrap h-80 w-full justify-center lg:justify-between items-center gap-y-10">
             <div className="text-white text-center lg:text-left">
               <p className="font-sans-semibold text-5xl">
-                Become a Web3 <br />
-                Developer on Polygon
+                Create your first <br />
+                NFT on Polygon
               </p>
               <p className="font-sans-medium text-lg pt-10 lg:pt-3">
                 In this course, you’ll learn:
               </p>
               <ul className="list-none lg:list-disc font-sans ml-5 pt-3">
-                <li>How to start a career in Web3</li>
                 <li>How to get setup and build smart contracts</li>
-                <li>How to create your own NFTs and Tokens</li>
+                <li>How to create your own NFTs</li>
               </ul>
             </div>
             <div className="h-[300px] w-[481px] rounded-xl relative overflow-hidden">
@@ -54,12 +53,12 @@ const Index: NextPage = () => {
             Getting Started
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
-            <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' emoji="🎓" title="Introduction to Web3" displayLessons={true}>
-              <SubLesson >What is Web3?</SubLesson>
-              <SubLesson>Opportunities in Web3</SubLesson>
-              <SubLesson>How to get started</SubLesson>
-            </LessonCard>
+            {/* <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' emoji="🎓" title="Introduction to Web3" displayLessons={true}>
+            </LessonCard> */}
             <LessonCard link='/learn/web3-development/lesson/setup-environment/0' emoji="👨‍💻" title="Setup your Development Environment" displayLessons={true}>
+            </LessonCard>
+            <LessonCard link='/learn/web3-development/lesson/deploy-hardhat/0' emoji="📄" title="Deploy a Smart Contract using 
+            Hardhat" displayLessons={true}>
             </LessonCard>
           </div>
               
@@ -71,8 +70,7 @@ const Index: NextPage = () => {
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
             <LessonCard emoji='🎨' title="How to build and deploy a NFT on Polygon"></LessonCard>
-            <LessonCard emoji="😊" title="How to create your own token on Polygon"></LessonCard>
-            <LessonCard emoji="📄" title="Create your first contract on Polygon"></LessonCard>
+            <LessonCard emoji="🐣" title="How to mint NFT and store NFT Metadata off chain."></LessonCard>
           </div>
         </div>
 

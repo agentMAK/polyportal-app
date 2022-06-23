@@ -18,9 +18,46 @@ const Slide = React.forwardRef((props: any, ref: any) => {
         }}
       >
         Continue
-      </Button>
+      </Button>{" "}
     </div>
   );
+
+  if (props.isStart) {
+    return (
+      <SlideIntro ref={ref}>
+        {props.children}
+        {props.displayButton ? button : null}
+        <br />
+        <br />
+      </SlideIntro>
+    );
+  }
+
+  if (props.isEnd) {
+    if (!confettiToggle) {
+      ShowConfetti();
+      setConfettiToggle(true);
+    }
+    button = (
+      <div className="w-full flex justify-center">
+        {" "}
+        <Button size="m" variant="dark" link={props.redirect}>
+          End Lesson
+        </Button>
+      </div>
+    );
+  }
+
+  if (props.isEnd) {
+    return (
+      <SlideIntro className="text-center"ref={ref}>
+        {props.children}
+        {props.displayButton ? button : null}
+        <br />
+        <br />
+      </SlideIntro>
+    );
+  }
 
   return (
     <>

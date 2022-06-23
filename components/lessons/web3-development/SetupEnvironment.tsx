@@ -265,7 +265,7 @@ The setup wizard will guide you through other installations. This installation o
   slides.getSlide(4).addCard(
     <SlideContent>
       <HeaderBlock>You’ve completed this lesson.</HeaderBlock>
-      <TextBlock>Our next lesson will released in a couple of days. <br />In the meanwhile, follow us on <a href="https://twitter.com/PolyPortalHQ" className="underline">Twitter</a> to get noticed. 🐦</TextBlock>
+      <TextBlock>Well done</TextBlock>
     </SlideContent>
   );
 
