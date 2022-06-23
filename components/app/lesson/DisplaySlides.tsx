@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Slide from "./DisplaySlide";
+import Slide from "./DisplaySlide copy";
 
 const DisplaySlides = (props: any) => {
 

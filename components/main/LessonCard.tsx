@@ -41,7 +41,7 @@ const LessonCard = (props: any) => {
     )
   
   
-    return (<div>
+    return (
       <div className="flex md:flex-row flex-col text-center md:text-left w-full items-center justify-center border-b-gray-300 border-b last:border-0 py-5">
                 <div className="flex-row justify-center w-20 md:flex hidden">
                   <Emoji emoji={props.emoji} size="32"/>
@@ -66,13 +66,12 @@ const LessonCard = (props: any) => {
                 />
                 </button>
               </div>
-              {displayLessons ? props.children : null}
-              </div>
     );
   };
 
   export default LessonCard
 
+// displayLesson removed
 LessonCard.defaultProps = {
   displayLessons:false
   }
