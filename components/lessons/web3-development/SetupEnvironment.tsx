@@ -24,7 +24,7 @@ import ImageBlock from "../../app/content-blocks/ImageBlock";
 import LinkBlock from "../../app/content-blocks/LinkBlock";
 import Bold from "../../app/content-blocks/Bold";
 import CodeBlock from "../../app/content-blocks/CodeBlock";
-import Code from "../../app/content-blocks/CodeBlock";
+import Code from "../../app/content-blocks/Code";
 
 
 
