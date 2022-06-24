@@ -30,7 +30,7 @@ import Code from "../../app/content-blocks/CodeBlock";
 
 
 const ContentSlides = () => {
-  let slides = new Slides(5);
+  let slides = new Slides("Setup Development Environment",5);
 
   slides.getSlide(0).addCard(
     <SlideContent>

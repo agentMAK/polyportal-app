@@ -27,7 +27,7 @@ import Italic from "../../app/content-blocks/Italic";
 
 
 const ContentSlides = () => {
-  let slides = new Slides(6);
+  let slides = new Slides("Deploy Hardhat",6);
 
   slides.getSlide(0).addCard(
     <SlideContent>

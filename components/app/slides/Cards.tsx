@@ -1,11 +1,11 @@
 import React, { createRef } from "react";
 
-class Slide {
-  slidesArray: Array<any>
+class Cards {
+  cardsArray: Array<any>
   refs:React.RefObject<any>
 
   constructor() {
-    this.slidesArray = []
+    this.cardsArray = []
     this.refs = createRef();
   }
 
@@ -14,8 +14,8 @@ class Slide {
   }
  
   addCard(slide:JSX.Element, config:any = this.defaultConfig) {
-    this.slidesArray.push({
-      key: this.slidesArray.length,
+    this.cardsArray.push({
+      key: this.cardsArray.length,
       value: {
         content: slide,
         ref: createRef(),
@@ -25,25 +25,25 @@ class Slide {
   }
 
   getCards() {
-    return this.slidesArray
+    return this.cardsArray
   }
 
   getCard(index:number){
-    return this.slidesArray[index].value.content
+    return this.cardsArray[index].value.content
   }
 
   getRef(index:number) {
-    return this.slidesArray[index].value.ref
+    return this.cardsArray[index].value.ref
   }
 
   getTotalCards() {
-    return this.slidesArray.length
+    return this.cardsArray.length
   }
 
   getConfig(index:number) {
-    return this.slidesArray[index].value.config
+    return this.cardsArray[index].value.config
   }
 }
 
 
-export default Slide
+export default Cards

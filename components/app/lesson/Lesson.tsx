@@ -14,6 +14,8 @@ const Lesson = (props: any) => {
   const router = useRouter();
 
   const { data: session } = useSession();
+  const [startedLesson,setStartedLesson] = useState(false)
+  const [endedLesson,setEndedLesson] = useState(false)
 
   mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL_PROJECT_ID}`, {
     debug: false,
@@ -22,12 +24,27 @@ const Lesson = (props: any) => {
     mixpanel.identify(`${session.id}`);
   }
 
-  // useEffect(() => {
-  //   mixpanel.track("Start Lesson", {
-  //     Lesson: "Introduction to Web3",
-  //     Course: "Web3 Development",
-  //   });
-  // }, []);
+  useEffect(() => {
+    if(!startedLesson && parseInt(props.currentSlide) === 1) {
+      setStartedLesson(true)
+      mixpanel.track("Start Lesson", {
+        Lesson: props.slides.getTitle(),
+      });
+    }
+  }, [startedLesson, props.slides, props.currentSlide]);
+
+  useEffect(() => {
+    console.log(props.slides.getTotalSlides())
+    if (props.currentSlide == props.slides.getTotalSlides()-1) {
+      if(!endedLesson) {
+        setEndedLesson(true)
+        mixpanel.track("End Lesson", {
+          Lesson: props.slides.getTitle(),
+        });
+      }
+    }
+  }, [props.slides, props.currentSlide, endedLesson]);
+
 
   const nextSlide = () => {
     // props.setCurrentSlide((prevCurrentSlide:number) => prevCurrentSlide < props.slides.getTotalSlides()-1 ? prevCurrentSlide +1 : props.slides.getTotalSlides()-1);
@@ -49,13 +66,6 @@ const Lesson = (props: any) => {
           undefined,
           { shallow: true }
         );
-
-    if (props.currentSlide == props.slides.getTotalSlides()) {
-      mixpanel.track("End Lesson", {
-        Lesson: "Introduction to Web3",
-        Course: "Web3 Development",
-      });
-    }
   };
 
   const previousSlide = () => {

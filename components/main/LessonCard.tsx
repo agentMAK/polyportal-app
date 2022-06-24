@@ -21,8 +21,8 @@ const LessonCard = (props: any) => {
                 <div className="flex-row justify-center w-20 md:flex hidden">
                   <Emoji emoji={props.emoji} size="32"/>
                 </div>
-                
-                <div className="w-full px-10">
+              
+                <div className="w-full md:px-0 px-10">
                     <a className="text-xl font-sans-semibold text-primary-900">
                       {props.title} 
                     </a>
