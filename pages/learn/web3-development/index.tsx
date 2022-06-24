@@ -5,10 +5,7 @@ import Image from "next/image";
 import web3 from "../../../public/images/cards/web3card.png";
 import Button from "../../../components/main/Button";
 import Footer from "../../../components/main/Footer";
-import Modal from "../../../components/main/modal/Modal";
-import { useState } from "react";
 import LessonCard from "../../../components/main/LessonCard";
-import SubLesson from "../../../components/main/SubLesson";
 
 const Index: NextPage = () => {
 

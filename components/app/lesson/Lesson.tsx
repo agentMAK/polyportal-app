@@ -18,7 +18,7 @@ const Lesson = (props: any) => {
   const [endedLesson,setEndedLesson] = useState(false)
 
   mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL_PROJECT_ID}`, {
-    debug: false,
+    debug: true,
   });
   if (session) {
     mixpanel.identify(`${session.id}`);
@@ -34,7 +34,6 @@ const Lesson = (props: any) => {
   }, [startedLesson, props.slides, props.currentSlide]);
 
   useEffect(() => {
-    console.log(props.slides.getTotalSlides())
     if (props.currentSlide == props.slides.getTotalSlides()-1) {
       if(!endedLesson) {
         setEndedLesson(true)
