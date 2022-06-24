@@ -13,7 +13,7 @@ const ProgressBar = (props:any) => {
             alt=""
         /></button>
 
-        <div className="h-2 rounded-2xl bg-slate-200 w-[384px] my-auto">
+        <div className="h-2 rounded-2xl bg-slate-200 sm:w-[384px] w-44 my-auto">
             <div style={{ width: `${props.percentageDone}%` }}>
                 <div className={"h-2 bg-primary-500 rounded-2xl w-full"}></div>
             </div>

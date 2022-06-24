@@ -85,7 +85,7 @@ const Lesson = (props: any) => {
     <div>
       <div className="grid grid-cols-3 h-20 w-full fixed top-0 bg-white z-50 drop-shadow-[0_0_15px_rgb(0,0,0,0.1)]">
         <Link href={props.redirect} passHref>
-          <button className="my-auto w-7 h-8 ml-7">
+          <button className="my-auto w-7 h-8 md:ml-7 ml-3">
             <Image src={cross} height={32} width={32} alt="" />
           </button>
         </Link>

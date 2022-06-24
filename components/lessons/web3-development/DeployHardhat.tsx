@@ -86,7 +86,7 @@ const ContentSlides = () => {
       <TextBlock>After a successful installation, you should see the following output in your terminal:</TextBlock>
       <ImageBlock image={projectCreated}></ImageBlock>
     </SlideContent>
-  );
+  ,{layout:'screen'});
 
 
 
