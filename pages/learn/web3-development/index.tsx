@@ -50,7 +50,7 @@ const Index: NextPage = () => {
       >
         <div className="mt-24">
           <p className="text-center font-sans-semibold text-3xl text-primary-700">
-            Getting Started
+            Start Building
           </p>
           <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
             {/* <LessonCard link='/learn/web3-development/lesson/introduction-to-web3/0' emoji="🎓" title="Introduction to Web3" displayLessons={true}>
@@ -60,18 +60,10 @@ const Index: NextPage = () => {
             <LessonCard link='/learn/web3-development/lesson/deploy-hardhat/0' emoji="📄" title="Deploy a Smart Contract using 
             Hardhat" displayLessons={true}>
             </LessonCard>
-          </div>
-              
-        </div>
-
-        <div className="mt-24">
-          <p className="text-center font-sans-semibold text-3xl text-primary-700">
-            Start Building
-          </p>
-          <div className="flex flex-col max-w-4xl mt-12 bg-white mx-auto rounded-xl drop-shadow-md">
             <LessonCard emoji='🎨' title="How to build and deploy a NFT on Polygon"></LessonCard>
             <LessonCard emoji="🐣" title="How to mint NFT and store NFT Metadata off chain."></LessonCard>
           </div>
+              
         </div>
 
         <div className="mt-32 w-5/6 mx-auto mb-52">

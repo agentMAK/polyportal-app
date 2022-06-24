@@ -4,9 +4,7 @@ import SlideContent from "../../app/slides/SlideContent";
 import ListBlock from "../../app/content-blocks/ListBlock";
 import Slides from "../../app/slides/Slides";
 import SubHeaderBlock from "../../app/content-blocks/SubHeaderBlock";
-import vscodedev from '../../../public/images/lessons/setup-environment/vscode-dev.png'
 import ImageBlock from "../../app/content-blocks/ImageBlock";
-import LinkBlock from "../../app/content-blocks/LinkBlock";
 import Bold from "../../app/content-blocks/Bold";
 import Code from "../../app/content-blocks/Code";
 import CodeBlock from "../../app/content-blocks/CodeBlock";
@@ -29,7 +27,7 @@ import Italic from "../../app/content-blocks/Italic";
 
 
 const ContentSlides = () => {
-  let slides = new Slides(6);
+  let slides = new Slides("Deploy Hardhat",6);
 
   slides.getSlide(0).addCard(
     <SlideContent>
@@ -88,7 +86,7 @@ const ContentSlides = () => {
       <TextBlock>After a successful installation, you should see the following output in your terminal:</TextBlock>
       <ImageBlock image={projectCreated}></ImageBlock>
     </SlideContent>
-  );
+  ,{layout:'screen'});
 
 
 

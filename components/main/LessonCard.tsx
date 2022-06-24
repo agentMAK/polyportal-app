@@ -17,12 +17,12 @@ const LessonCard = (props: any) => {
   }
 
     if(props.link == undefined) return (
-      <div className="flex md:flex-row flex-col text-center md:text-left w-full items-center justify-center border-b-gray-300 border-b last:border-0 py-5">
+      <div className="flex md:flex-row flex-col text-left w-full items-center justify-center border-b-gray-300 border-b last:border-0 py-5">
                 <div className="flex-row justify-center w-20 md:flex hidden">
                   <Emoji emoji={props.emoji} size="32"/>
                 </div>
-                
-                <div className="w-full">
+              
+                <div className="w-full md:px-0 px-10">
                     <a className="text-xl font-sans-semibold text-primary-900">
                       {props.title} 
                     </a>
@@ -42,16 +42,16 @@ const LessonCard = (props: any) => {
   
   
     return (
-      <div className="flex md:flex-row flex-col text-center md:text-left w-full items-center justify-center border-b-gray-300 border-b last:border-0 py-5">
+      <div className="flex flex-row text-left w-full items-center justify-center border-b-gray-300 border-b last:border-0 py-5">
                 <div className="flex-row justify-center w-20 md:flex hidden">
                   <Emoji emoji={props.emoji} size="32"/>
                 </div>
-                <div className="w-full">
+                <div className="w-full md:pl-0 pl-10">
                     <a href={props.link} className="text-xl font-sans-semibold text-primary-900 hover:text-primary-500">
                       {props.title}
                     </a>
                 </div>
-                <div className="md:block hidden">
+                <div className="md:pr-0 pr-10">
                 <Button size="s" link={props.link}>
                     Start
                   </Button>

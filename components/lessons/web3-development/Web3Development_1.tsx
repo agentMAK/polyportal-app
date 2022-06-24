@@ -11,13 +11,12 @@ import web3salaries from "../../../public/images/lessons/web3-developement/web3s
 import SubHeaderBlock from "../../app/content-blocks/SubHeaderBlock";
 import ListBlock from "../../app/content-blocks/ListBlock";
 import web3 from "../../../public/images/lessons/web3-developement/web3.png"
-import yay from "../../../public/images/lessons/web3-developement/yay.jpg"
 import Bold from "../../app/content-blocks/Bold";
 import Slides from "../../app/slides/Slides";
 
 const ContentSlides = () => {
   
-  let slides = new Slides(5)
+  let slides = new Slides("Introduction to Web3",5)
 
   slides.getSlide(0).addCard(
     <SlideContent>

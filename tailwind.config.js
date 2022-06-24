@@ -12,6 +12,8 @@ module.exports = {
         'sans-medium': ['GeneralSans-Medium'],
         'sans-semibold': ['GeneralSans-Semibold'],
         'sans-bold': ['GeneralSans-Bold'],
+        'code': ['AnonymousPro'],
+        'code-bold': ['AnonymousPro-Bold']
       },
       colors: {
         primary: {
