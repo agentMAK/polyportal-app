@@ -18,7 +18,7 @@ const Lesson = (props: any) => {
   const [endedLesson,setEndedLesson] = useState(false)
 
   mixpanel.init(`${process.env.NEXT_PUBLIC_MIXPANEL_PROJECT_ID}`, {
-    debug: true,
+    debug: false,
   });
   if (session) {
     mixpanel.identify(`${session.id}`);
