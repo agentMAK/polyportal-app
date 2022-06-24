@@ -23,6 +23,8 @@ import nodeLogo from '../../../public/images/lessons/setup-environment/node_logo
 import ImageBlock from "../../app/content-blocks/ImageBlock";
 import LinkBlock from "../../app/content-blocks/LinkBlock";
 import Bold from "../../app/content-blocks/Bold";
+import CodeBlock from "../../app/content-blocks/CodeBlock";
+import Code from "../../app/content-blocks/CodeBlock";
 
 
 
@@ -200,9 +202,9 @@ The setup wizard will guide you through other installations. This installation o
             <SubHeaderBlock>
             Step 4 - Verify Node.js Installation</SubHeaderBlock>
       <TextBlock>Open your terminal on your Vscode by pressing ctrl + ` and enter the command below to confirm if Node.js has been successfully installed on your computer:</TextBlock>
-      <TextBlock><Bold>node -v</Bold></TextBlock>
+      <CodeBlock>node -v</CodeBlock>
       <TextBlock>or</TextBlock>
-      <TextBlock><Bold>node -- version</Bold></TextBlock>
+      <CodeBlock>node -- version</CodeBlock>
       <ImageBlock image={nodeTerminal}></ImageBlock>
       <TextBlock>If you encounter an error that ‘node is not recognized as an internal or external command’, that means Node.js is not installed on your system.</TextBlock>
     </SlideContent>
@@ -237,12 +239,12 @@ The setup wizard will guide you through other installations. This installation o
             <SubHeaderBlock>
             Step 1 - Setting Up a Node Development Environment</SubHeaderBlock>
       <TextBlock>In order to start using Hardhat, we need to set up a new Node project because Hardhat runs on the JavaScript runtime environment.</TextBlock>
-      <TextBlock>First, create a folder named hello_world from your terminal with the command below:</TextBlock>
-      <TextBlock><Bold>mkdir hellow_world</Bold></TextBlock>
-      <TextBlock>Next, navigate into the hello_world folder with the command below:</TextBlock>
-      <TextBlock><Bold>cd hello_world</Bold></TextBlock>
+      <TextBlock>First, create a folder named <Code>hello_world</Code> from your terminal with the command below:</TextBlock>
+      <CodeBlock>mkdir hellow_world</CodeBlock>
+      <TextBlock>Next, navigate into the <Code>hello_world</Code> folder with the command below:</TextBlock>
+      <CodeBlock>cd hello_world</CodeBlock>
       <TextBlock>Initialize a new package.json file:</TextBlock>
-      <TextBlock><Bold>npm init -y</Bold></TextBlock>
+      <CodeBlock>npm init -y</CodeBlock>
       <TextBlock>The command above will create a new `package.json file with the code below:</TextBlock>
       <ImageBlock image={packageImg}></ImageBlock>
       <TextBlock>The Package.json file will contain all the packages that are required in our Node.js application.</TextBlock>
@@ -256,7 +258,7 @@ The setup wizard will guide you through other installations. This installation o
             <SubHeaderBlock>
             Step 2 - Installing Hardhat </SubHeaderBlock>
       <TextBlock>Lastly, install Hardhat in your project with the command below:</TextBlock>
-      <TextBlock><Bold>npm install --save-dev hardhat</Bold></TextBlock>
+      <CodeBlock>npm install --save-dev hardhat</CodeBlock>
       <ImageBlock image={hardhat}></ImageBlock>
 
     </SlideContent>
@@ -265,7 +267,7 @@ The setup wizard will guide you through other installations. This installation o
   slides.getSlide(4).addCard(
     <SlideContent>
       <HeaderBlock>You’ve completed this lesson.</HeaderBlock>
-      <TextBlock>Well done</TextBlock>
+      <TextBlock>Explore more lessons to learn Web3</TextBlock>
     </SlideContent>
   );
 

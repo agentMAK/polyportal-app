@@ -1,6 +1,4 @@
-import styled from "@emotion/styled";
 import React, { useEffect, useState } from "react";
-import Button from "../../main/Button";
 import ShowConfetti from "../animations/ShowConfetti";
 import CardBlock from "./CardBlock";
 import CardButton from "./CardButton";
@@ -18,6 +16,10 @@ const Slide = React.forwardRef((props: any, ref: any) => {
       layout = "screen";
     } else if (props.status === "end") {
       layout = "focus";
+      if (!confettiToggle) {
+        ShowConfetti();
+        setConfettiToggle(true);
+      }
     }
   }
 

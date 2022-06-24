@@ -1,7 +1,7 @@
 const Code = (props:any) => {
 
     return ( 
-      <span className="bg-primary-300">{props.children}</span>
+      <span className="bg-primary-300 font-code">{props.children}</span>
     )
   }
   

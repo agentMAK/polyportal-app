@@ -4,9 +4,7 @@ import SlideContent from "../../app/slides/SlideContent";
 import ListBlock from "../../app/content-blocks/ListBlock";
 import Slides from "../../app/slides/Slides";
 import SubHeaderBlock from "../../app/content-blocks/SubHeaderBlock";
-import vscodedev from '../../../public/images/lessons/setup-environment/vscode-dev.png'
 import ImageBlock from "../../app/content-blocks/ImageBlock";
-import LinkBlock from "../../app/content-blocks/LinkBlock";
 import Bold from "../../app/content-blocks/Bold";
 import Code from "../../app/content-blocks/Code";
 import CodeBlock from "../../app/content-blocks/CodeBlock";

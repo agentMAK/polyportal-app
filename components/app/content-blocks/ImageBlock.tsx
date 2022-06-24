@@ -8,7 +8,7 @@ const ImageBlock = (props:any) => {
               src={props.image}
               alt=""
               layout="responsive"
-              priority
+              priority={true}
           /></div>
     )
   }
