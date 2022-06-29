@@ -16,7 +16,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/learn/web3-development',
+        destination: '/learn',
         permanent: true,
       }
     ]
