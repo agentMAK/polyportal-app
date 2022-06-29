@@ -28,7 +28,7 @@ const Index: NextPage = (props: any) => {
           {/* <CourseCard image={web3} title="Web3 for Beginners" link="/learn/web3-video">
             What is Web3? How does it works? And how do I take advantage of the opportunities available. Let introduce you.
           </CourseCard> */}
-          <CourseCard image={web3} title="Become a Web3 Developer on Polygon" link="/learn/web3-development">
+          <CourseCard image={web3} title="Create a Smart Contract and Mint a NFT on Polygon" link="/learn/web3-development">
            Interested in become a web3 developer. Create your every own NFTs and Tokens on Polygon.
           </CourseCard>
           <CourseCard image={metamask} title="Setup Metamask" status="disabled">

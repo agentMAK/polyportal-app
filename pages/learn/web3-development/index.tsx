@@ -16,9 +16,8 @@ const Index: NextPage = () => {
         <div className="lg:max-w-screen-lg max-w-xs sm:max-w-screen-sm md:max-w-screen-md mx-auto h-[590px] md:h-[540px] lg:h-fit">
           <div className="flex flex-row flex-wrap h-80 w-full justify-center lg:justify-between items-center gap-y-10">
             <div className="text-white text-center lg:text-left">
-              <p className="font-sans-semibold text-5xl">
-                Create your first <br />
-                NFT on Polygon
+              <p className="font-sans-semibold text-4xl">
+              Create a smart contract <br />and mint NFT on Polygon
               </p>
               <p className="font-sans-medium text-lg pt-10 lg:pt-3">
                 In this course, you’ll learn:
