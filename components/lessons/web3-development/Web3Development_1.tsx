@@ -162,7 +162,7 @@ const ContentSlides = () => {
   slides.getSlide(4).addCard(
     <SlideContent>
       <HeaderBlock>You’ve completed this lesson.</HeaderBlock>
-      <TextBlock>In the next lesson, you&apos;ll learn how to setup your development environment </TextBlock>
+      <TextBlock>Follow our next lesson </TextBlock>
     </SlideContent>
   );
 
