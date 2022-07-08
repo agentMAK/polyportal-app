@@ -28,31 +28,28 @@ const Index: NextPage = (props: any) => {
           {/* <CourseCard image={web3} title="Web3 for Beginners" link="/learn/web3-video">
             What is Web3? How does it works? And how do I take advantage of the opportunities available. Let introduce you.
           </CourseCard> */}
-          <CourseCard image={web3} title="Create a Smart Contract and Mint a NFT on Polygon" link="/learn/web3-development">
-           Interested in become a web3 developer. Create your every own NFTs and Tokens on Polygon.
+          <CourseCard image={web3} title="What is Web3" link="/learn/web3-development/lesson/introduction-to-web3/0">
+           Explore what Web3 is all about. Discover how you can get involved in the Web3 space
           </CourseCard>
-          <CourseCard image={metamask} title="Setup Metamask" status="disabled">
+          <CourseCard image={metamask} title="Create a Web3 Wallet" link="/learn/lesson/create-wallet/0" status='disabled'>
             Metamask is the web3 wallet used to interact with decentralised application. Learn how to get setup and start using Metamask.
           </CourseCard>
-          <CourseCard image={nft} title="NFTs on Polygon" status="disabled">
+          <CourseCard image={nft} title="Mint a NFT on Polygon" status="disabled">
             There are thousands of NFT projects in Crypto. The starter guide will help you navigate the space.
           </CourseCard>
           <CourseCard
             image={dao}
-            title="Introduction to DAOs"
+            title="Swap Tokens"
             status="disabled"
           >
-            DAOs stand for Decentralised Autonomous Organisations. It&apos;s a new type of organsation built on the internet with participants from around the world. Let&apos;s explore.
+            Make you&apos;re very first token swap using a decentrailized exchange. Start interacting with web3 apps
           </CourseCard>
           <CourseCard
             image={metaverse}
-            title="Explore the Metaverse"
+            title="Fund your Wallet"
             status="disabled"
           >
-            The Metaverse is coming. Get familiar with the space now and the new possibilies that the Meteverse enables.
-          </CourseCard>
-          <CourseCard image={aave} title="How to use Aave" status="disabled">
-            Aave is the decentralised lending protocol. You can both borrow crypto from Aave or lend your crypto to earn interest. Get to know Aave.
+            Let&apos;s help you get funds directly into your Polygon Wallet. We&apos;ll walk you through the process
           </CourseCard>
         </div>
         <Footer />

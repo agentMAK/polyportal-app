@@ -17,10 +17,10 @@ const Index: NextPage = () => {
           <div className="flex flex-row flex-wrap h-80 w-full justify-center lg:justify-between items-center gap-y-10">
             <div className="text-white text-center lg:text-left">
               <p className="font-sans-semibold text-4xl">
-              Create a smart contract <br />and mint NFT on Polygon
+              Create a smart contract <br />and NFT on Polygon
               </p>
               <p className="font-sans-medium text-lg pt-10 lg:pt-3">
-                In this course, you’ll learn:
+                In this course, you&apos;ll learn:
               </p>
               <ul className="list-none lg:list-disc font-sans ml-5 pt-3">
                 <li>How to get setup and build smart contracts</li>
@@ -59,7 +59,7 @@ const Index: NextPage = () => {
             <LessonCard emoji='🎨' title="How to build and deploy a NFT on Polygon"></LessonCard>
             <LessonCard emoji="🐣" title="How to mint NFT and store NFT Metadata off chain."></LessonCard>
           </div>
-              
+
         </div>
 
         <div className="mt-32 w-5/6 mx-auto mb-52">
