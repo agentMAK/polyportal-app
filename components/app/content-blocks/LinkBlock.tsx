@@ -1,10 +1,22 @@
 import Link from "next/link"
 
-const TextBlock = (props:any) => {
+const LinkBlock = (props:any) => {
+
+    let link = props.children
+
+    if (props.newTab == true) {
+      link = <a href={props.link} target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:underline"> {link} </a>
+    } else {
+      link = <Link href={props.link}><a className="text-primary-500 hover:underline">{link}</a></Link>
+    }
 
     return ( 
-        <Link href={props.link}><a className="text-primary-500 hover:underline">{props.children}</a></Link>
+        link
     )
   }
   
-export default TextBlock 
+export default LinkBlock 
+
+LinkBlock.defaultProps = {
+  newTab:true
+}

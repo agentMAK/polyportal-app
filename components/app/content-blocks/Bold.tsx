@@ -1,7 +1,7 @@
 const Bold = (props:any) => {
 
     return ( 
-      <span className="font-sans-semibold">{props.children}</span>
+      <span className="font-sans-semibold text-primary-500">{props.children}</span>
     )
   }
   
