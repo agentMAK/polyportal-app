@@ -31,7 +31,7 @@ const Index: NextPage = (props: any) => {
           <CourseCard image={web3} title="What is Web3" link="/learn/web3-development/lesson/introduction-to-web3/0">
            Explore what Web3 is all about. Discover how you can get involved in the Web3 space
           </CourseCard>
-          <CourseCard image={metamask} title="Create a Web3 Wallet" link="/learn/lesson/create-wallet/0" status='disabled'>
+          <CourseCard image={metamask} title="Create a Web3 Wallet" link="/learn/lesson/create-wallet/0">
             Metamask is the web3 wallet used to interact with decentralised application. Learn how to get setup and start using Metamask.
           </CourseCard>
           <CourseCard image={nft} title="Mint a NFT on Polygon" status="disabled">
