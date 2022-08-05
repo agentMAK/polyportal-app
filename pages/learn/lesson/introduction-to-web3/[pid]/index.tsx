@@ -1,8 +1,7 @@
 import type { GetServerSideProps, NextPage } from "next";
-import Meta from "../../../../../../components/header/meta"
-import Lesson from "../../../../../../components/app/lesson/Lesson";
-import Web3Development_1 from "../../../../../../components/lessons/web3-development/Web3Development_1";
-import { getSession } from "next-auth/react";
+import Meta from "../../../../../components/header/meta"
+import Lesson from "../../../../../components/app/lesson/Lesson";
+import IntroToWeb3 from "../../../../../components/lessons/web3/IntroToWeb3";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -11,7 +10,7 @@ const Index: NextPage = (props: any) => {
   const router = useRouter()
   const { pid }:any = router.query
 
-  const slides = Web3Development_1()
+  const slides = IntroToWeb3()
 
   const [currentSlide, setCurrentSlide] = useState<any>(0);
 

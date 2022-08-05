@@ -4,7 +4,7 @@ import Lesson from "../../../../../components/app/lesson/Lesson";
 import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import CreateWallet from "../../../../../components/lessons/web3-development/CreateWallet";
+import CreateWallet from "../../../../../components/lessons/web3/CreateWallet";
 
 const Index: NextPage = (props: any) => {
 

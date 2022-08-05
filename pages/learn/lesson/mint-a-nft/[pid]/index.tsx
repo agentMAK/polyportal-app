@@ -1,17 +1,17 @@
 import type { GetServerSideProps, NextPage } from "next";
-import Meta from "../../../../../../components/header/meta"
-import Lesson from "../../../../../../components/app/lesson/Lesson";
+import Meta from "../../../../../components/header/meta"
+import Lesson from "../../../../../components/app/lesson/Lesson";
 import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import DeployHardhat from "../../../../../../components/lessons/web3-development/CreateWallet";
+import MintANFT from "../../../../../components/lessons/web3/MintANFT";
 
 const Index: NextPage = (props: any) => {
 
   const router = useRouter()
   const { pid }:any = router.query
 
-  const slides = DeployHardhat()
+  const slides = MintANFT()
 
   const [currentSlide, setCurrentSlide] = useState<any>(0);
 
@@ -20,8 +20,8 @@ const Index: NextPage = (props: any) => {
   }, [pid, slides])
   
   return (<>
-    <Meta title="PolyPortal - Setup Environment"></Meta>
-    <Lesson slides={slides} redirect="/learn/web3-development/" currentSlide={currentSlide} setCurrentSlide={setCurrentSlide}></Lesson>
+    <Meta title="PolyPortal - Create a Web3 Wallet"></Meta>
+    <Lesson slides={slides} redirect="/learn" currentSlide={currentSlide} setCurrentSlide={setCurrentSlide}></Lesson>
     </>
   );
 };
